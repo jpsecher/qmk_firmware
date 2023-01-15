@@ -30,6 +30,7 @@
 #define SPC_NAV LT(_NAVI_FN, KC_SPC)
 #define SPC_SYM LT(_SYM_NUM, KC_SPC)
 #define SPC_GUI LGUI_T(KC_SPC)
+#define NUL_GUI LGUI_T(KC_0)
 #define OSM_AGR OSM(MOD_RALT)
 
 enum layer_names {
@@ -48,13 +49,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_NAVI_FN] = LAYOUT(
     KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,      KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
     KC_TAB,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TILD,    KC_GRV,  KC_LEFT, KC_UP,   KC_RGHT, KC_WBAK, KC_ENT,
-             KC_UNDO, KC_CUT,  KC_COPY, KC_PSTE,                      KC_HOME, KC_DOWN, KC_END,  KC_WREF,
-             KC_MPRV, _______, BS_CTL,  _______, _______,    _______, _______, _______, _______, KC_PWR,  _______
+             KC_UNDO, KC_CUT,  KC_COPY, KC_PSTE,                      KC_WH_D, KC_DOWN, KC_WH_U, KC_WREF,
+             KC_MPRV, _______, BS_CTL,  _______, _______,    _______, _______, _______, _______, KC_PWR,  EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC,    KC_BTN2, KC_7,    KC_8,    KC_9,    KC_UNDS, KC_ASTR,
     KC_QUES, KC_SLSH, KC_LBRC, KC_LCBR, KC_LPRN, KC_PIPE,    KC_AMPR, KC_4,    KC_5,    KC_6,    KC_MINS, KC_EQL,
              KC_BSLS, KC_RBRC, KC_RCBR, KC_RPRN,                      KC_1,    KC_2,    KC_3,    KC_PLUS,
-             KC_VOLD, _______, _______, _______, _______,    KC_BTN1, _______, KC_0,    _______, KC_VOLU, _______
+             KC_VOLD, _______, _______, _______, _______,    KC_BTN1, _______, NUL_GUI, _______, KC_VOLU, QK_BOOT
   )
 };
