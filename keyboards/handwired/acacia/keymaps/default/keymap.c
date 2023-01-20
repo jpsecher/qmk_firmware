@@ -94,9 +94,9 @@ enum layer_names {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT(
     KC_K,     KC_Q,     KC_W,     KC_D,     KC_R,     KC_G,       KC_H,     KC_U,     KC_I,     KC_O,     KC_P,     KC_Y,
-    OSM_LSFT, KC_A,     KC_S,     KC_T,     KC_F,     KC_B,       KC_N,     KC_J,     KC_E,     KC_L,     KC_SCLN,  OSM_RSFT,
+    KC_TAB,   KC_A,     KC_S,     KC_T,     KC_F,     KC_B,       KC_N,     KC_J,     KC_E,     KC_L,     KC_SCLN,  KC_ENT,
               Z_GUI,    X_CTL,    C_AGR,    V_ALT,                          M_ALT,    COMM_AGR, DOT_CTL,  QUOT_GUI,
-              KC_MNXT,  KC_ESC,   BS_SYM,   KC_DEL,   KC_LALT,    KC_LALT,  KC_ENT,   SPC_NAV,  KC_TAB,   KC_MPLY,  DB_TOGG
+              KC_MNXT,  KC_ESC,   BS_SYM,   OSM_LSFT, KC_LALT,    KC_LALT,  OSM_RSFT, SPC_NAV,  KC_DEL,   KC_MPLY,  DB_TOGG
   ),
   [_NAVI_FN] = LAYOUT(
     KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,      KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,
