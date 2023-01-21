@@ -36,16 +36,6 @@
 #define TAB_ALT LALT_T(KC_TAB)
 #define ENT_CTL LCTL_T(KC_ENT)
 
-// Alpha upper home row mods
-#define Q_AGR RALT_T(KC_Q)
-#define P_AGR RALT_T(KC_P)
-#define W_GUI LGUI_T(KC_W)
-#define O_GUI RGUI_T(KC_O)
-#define D_ALT LALT_T(KC_D)
-#define I_ALT LALT_T(KC_I)
-#define R_CTL LCTL_T(KC_R)
-#define U_CTL RCTL_T(KC_U)
-
 // Alpha lower home row mods
 #define Z_AGR RALT_T(KC_Z)
 #define X_GUI LGUI_T(KC_X)
@@ -55,25 +45,6 @@
 #define COMM_ALT LALT_T(KC_COMM)
 #define DOT_GUI RGUI_T(KC_DOT)
 #define QUOT_AGR RALT_T(KC_QUOT)
-
-// Navigation upper home row mods
-#define F2_AGR RALT_T(KC_F2)
-#define F11_AGR RALT_T(KC_F11)
-#define F3_GUI LGUI_T(KC_F3)
-#define F10_GUI RGUI_T(KC_F10)
-#define F4_ALT LALT_T(KC_F4)
-#define F9_ALT LALT_T(KC_F9)
-#define F5_CTL LCTL_T(KC_F5)
-#define F8_CTL RCTL_T(KC_F8)
-
-// Symbols upper home row mods
-#define GRV_AGR RALT_T(KC_GRV)
-#define BSLS_GUI LGUI_T(KC_BSLS)
-#define NINE_GUI RGUI_T(KC_9)
-#define LBRC_ALT LALT_T(KC_LBRC)
-#define EIGH_ALT LALT_T(KC_8)
-#define RBRC_CTL LCTL_T(KC_RBRC)
-#define SEVN_CTL RCTL_T(KC_7)
 
 // Symbols lower home row mods
 #define BSLS_AGR RALT_T(KC_BSLS)
