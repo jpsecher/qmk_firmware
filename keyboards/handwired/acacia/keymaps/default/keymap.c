@@ -49,10 +49,10 @@
 #define QUOT_GUI RGUI_T(KC_QUOT)
 
 // Symbols lower home row mods
-#define BSLS_GUI LGUI_T(KC_BSLS)
-#define LBRC_ALT LALT_T(KC_LBRC)
-#define RBRC_AGR RALT_T(KC_RBRC)
-#define GRV_CTL LCTL_T(KC_GRV)
+#define GRV_GUI LGUI_T(KC_GRV)
+#define BSLS_ALT LALT_T(KC_BSLS)
+#define LBRC_AGR RALT_T(KC_LBRC)
+#define RBRC_CTL LCTL_T(KC_RBRC)
 #define ONE_CTL RCTL_T(KC_1)
 #define TWO_AGR RALT_T(KC_2)
 #define THRE_ALT LALT_T(KC_3)
@@ -79,8 +79,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_SYM_NUM] = LAYOUT(
     KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,    KC_BTN1,  KC_7,     KC_8,     KC_9,     KC_AMPR,  KC_ASTR,
-    KC_QUES,  KC_LCBR,  KC_LPRN,  KC_RPRN,  KC_RCBR,  KC_PIPE,    KC_UNDS,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_PLUS,
-              BSLS_GUI, LBRC_ALT, RBRC_AGR, GRV_CTL,                        ONE_CTL,  TWO_AGR,  THRE_ALT, EQL_GUI,
+    KC_QUES,  KC_LCBR,  KC_RCBR,  KC_LPRN,  KC_RPRN,  KC_PIPE,    KC_UNDS,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_PLUS,
+              GRV_GUI,  BSLS_ALT, LBRC_AGR, RBRC_CTL,                       ONE_CTL,  TWO_AGR,  THRE_ALT, EQL_GUI,
               KC_VOLD,  KC_BTN1,  _______,  KC_BTN2,  _______,    _______,  KC_BTN2,  KC_SPC,   KC_0,     KC_VOLU,  QK_BOOT
   )
 };
