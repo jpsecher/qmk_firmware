@@ -24,3 +24,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Makes the lower-row tap-mods work better
 #define IGNORE_MOD_TAP_INTERRUPT
+
+// Smart caps lock when both shifts are pressed
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
