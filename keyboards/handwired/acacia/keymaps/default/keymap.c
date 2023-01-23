@@ -46,7 +46,7 @@
 #define M_CTL RCTL_T(KC_M)
 #define COMM_AGR RALT_T(KC_COMM)
 #define DOT_ALT LALT_T(KC_DOT)
-#define QUOT_GUI RGUI_T(KC_QUOT)
+#define SLSH_GUI RGUI_T(KC_SLSH)
 
 // Symbols lower home row mods
 #define GRV_GUI LGUI_T(KC_GRV)
@@ -66,20 +66,20 @@ enum layer_names {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT(
-    KC_K,     KC_Q,     KC_W,     KC_D,     KC_R,     KC_G,       KC_H,     KC_U,     KC_I,     KC_O,     KC_P,     KC_Y,
-    KC_TAB,   KC_A,     KC_S,     KC_T,     KC_F,     KC_B,       KC_J,     KC_N,     KC_E,     KC_L,     KC_SCLN,  KC_ENT,
-              Z_GUI,    X_ALT,    C_AGR,    V_CTL,                          M_CTL,    COMM_AGR, DOT_ALT,  QUOT_GUI,
-              KC_MNXT,  KC_DEL,   BS_SYM,   OSM_LSFT, KC_LALT,    KC_LALT,  OSM_RSFT, SPC_NAV,  KC_ESC,   KC_MPLY,  DB_TOGG
+    KC_K,     KC_Q,     KC_W,     KC_D,     KC_R,     KC_G,       KC_H,     KC_U,     KC_I,     KC_O,     KC_Y,     KC_QUOT,
+    KC_TAB,   KC_A,     KC_S,     KC_T,     KC_F,     KC_B,       KC_J,     KC_N,     KC_E,     KC_L,     KC_P,     KC_ENT,
+              Z_GUI,    X_ALT,    C_AGR,    V_CTL,                          M_CTL,    COMM_AGR, DOT_ALT,  SLSH_GUI,
+              KC_MNXT,  KC_DEL,   BS_SYM,   OSM_LSFT, KC_LALT,    KC_LALT,  SC_SENT,  SPC_NAV,  QK_GESC,  KC_MPLY,  DB_TOGG
   ),
   [_NAVI_FN] = LAYOUT(
     KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,      KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,
-    KC_TAB,   KC_WH_D,  KC_HOME,  KC_PGUP,  KC_END,   KC_TILD,    KC_SLSH,  KC_LEFT,  KC_UP,    KC_RGHT,  KC_WH_U,  KC_ENT,
+    TG(2),    KC_WH_D,  KC_HOME,  KC_PGUP,  KC_END,   KC_PIPE,    KC_TILD,  KC_LEFT,  KC_UP,    KC_RGHT,  KC_WH_U,  TG(1),
               KC_LGUI,  KC_LALT,  KC_PGDN,  KC_LCTL,                        KC_RCTL,  KC_DOWN,  KC_LALT,  KC_RGUI,
               KC_MPRV,  _______,  KC_BSPC,  _______,  _______,    _______,  _______,  _______,  _______,  KC_PWR,   EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
     KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,    KC_BTN1,  KC_7,     KC_8,     KC_9,     KC_AMPR,  KC_ASTR,
-    KC_QUES,  KC_LCBR,  KC_RCBR,  KC_LPRN,  KC_RPRN,  KC_PIPE,    KC_UNDS,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_PLUS,
+    KC_SCLN,  KC_LCBR,  KC_RCBR,  KC_LPRN,  KC_RPRN,  KC_COLN,    KC_UNDS,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_PLUS,
               GRV_GUI,  BSLS_ALT, LBRC_AGR, RBRC_CTL,                       ONE_CTL,  TWO_AGR,  THRE_ALT, EQL_GUI,
               KC_VOLD,  KC_BTN1,  _______,  KC_BTN2,  _______,    _______,  KC_BTN2,  KC_SPC,   KC_0,     KC_VOLU,  QK_BOOT
   )
