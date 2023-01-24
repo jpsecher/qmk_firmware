@@ -14,6 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#include "features/layer_lock.h"
+
+enum custom_keycodes {
+  LAYERLCK = SAFE_RANGE,
+};
 
 // Thumbs
 #define OSM_LSFT OSM(MOD_LSFT)
@@ -59,21 +64,24 @@
 #define EQL_GUI RGUI_T(KC_EQL)
 
 enum layer_names {
-    _QWERTY,
-    _NAVI_FN,
-    _SYM_NUM
+  _QWERTY,
+  _NAVI_FN,
+  _SYM_NUM
 };
+
+#define LOCK_NAV TO(_NAVI_FN)
+#define LOCK_SYM TO(_SYM_NUM)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT(
     KC_K,     KC_Q,     KC_W,     KC_D,     KC_R,     KC_G,       KC_H,     KC_U,     KC_I,     KC_O,     KC_Y,     KC_QUOT,
     KC_TAB,   KC_A,     KC_S,     KC_T,     KC_F,     KC_B,       KC_J,     KC_N,     KC_E,     KC_L,     KC_P,     KC_ENT,
               Z_GUI,    X_ALT,    C_AGR,    V_CTL,                          M_CTL,    COMM_AGR, DOT_ALT,  SLSH_GUI,
-              KC_MNXT,  KC_DEL,   BS_SYM,   OSM_LSFT, KC_LALT,    KC_LALT,  SC_SENT,  SPC_NAV,  QK_GESC,  KC_MPLY,  DB_TOGG
+              KC_MNXT,  KC_DEL,   BS_SYM,   OSM_LSFT, KC_LALT,    KC_LALT,  SC_SENT,  SPC_NAV,  KC_ESC,   KC_MPLY,  DB_TOGG
   ),
   [_NAVI_FN] = LAYOUT(
     KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,      KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,
-    TG(2),    KC_WH_D,  KC_HOME,  KC_PGUP,  KC_END,   KC_PIPE,    KC_TILD,  KC_LEFT,  KC_UP,    KC_RGHT,  KC_WH_U,  TG(1),
+    LAYERLCK, KC_WH_D,  KC_HOME,  KC_PGUP,  KC_END,   KC_PIPE,    KC_TILD,  KC_LEFT,  KC_UP,    KC_RGHT,  KC_WH_U,  LAYERLCK,
               KC_LGUI,  KC_LALT,  KC_PGDN,  KC_LCTL,                        KC_RCTL,  KC_DOWN,  KC_LALT,  KC_RGUI,
               KC_MPRV,  _______,  KC_BSPC,  _______,  _______,    _______,  _______,  _______,  _______,  KC_PWR,   EE_CLR
   ),
@@ -84,3 +92,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_VOLD,  KC_BTN1,  _______,  KC_BTN2,  _______,    _______,  KC_BTN2,  KC_SPC,   KC_0,     KC_VOLU,  QK_BOOT
   )
 };
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  if (!process_layer_lock(keycode, record, LAYERLCK)) {
+    return false;
+  }
+  return true;
+}
