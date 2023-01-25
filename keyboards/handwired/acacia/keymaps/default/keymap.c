@@ -75,8 +75,8 @@ enum layer_names {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT(
-    KC_K,     KC_Q,     KC_W,     KC_D,     KC_R,     KC_G,       KC_H,     KC_U,     KC_I,     KC_O,     KC_Y,     KC_QUOT,
-    KC_ESC,   KC_A,     KC_S,     KC_T,     KC_F,     KC_B,       KC_J,     KC_N,     KC_E,     KC_L,     KC_P,     KC_ENT,
+    KC_K,     KC_Q,     KC_W,     KC_D,     KC_R,     KC_G,       KC_H,     KC_U,     KC_I,     KC_O,     KC_P,     KC_QUOT,
+    QK_GESC,  KC_A,     KC_S,     KC_T,     KC_F,     KC_B,       KC_J,     KC_N,     KC_E,     KC_L,     KC_Y,     KC_ENT,
               Z_GUI,    X_ALT,    C_AGR,    V_CTL,                          M_CTL,    COMM_AGR, DOT_ALT,  SLSH_GUI,
               KC_MNXT,  OSM_LSFT, TAB_SYM,  KC_DEL,   QK_GESC,    SC_SENT,  KC_BSPC,  SPC_NAV,  OSM_RSFT, KC_MPLY,  DB_TOGG
   ),
@@ -87,8 +87,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_MPRV,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  KC_PWR,   EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
-    KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,    KC_AMPR,  KC_7,     KC_8,     KC_9,     KC_ASTR,  KC_COLN,
-    LAYERLCK, KC_LCBR,  KC_RCBR,  KC_LPRN,  KC_RPRN,  KC_SCLN,    KC_UNDS,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_PLUS,
+    KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,    KC_AMPR,  KC_7,     KC_8,     KC_9,     KC_ASTR,  KC_SCLN,
+    LAYERLCK, KC_LCBR,  KC_RCBR,  KC_LPRN,  KC_RPRN,  KC_COLN,    KC_UNDS,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_PLUS,
               GRV_GUI,  BSLS_ALT, LBRC_AGR, RBRC_CTL,                       ONE_CTL,  TWO_AGR,  THRE_ALT, EQL_GUI,
               KC_VOLD,  _______,  _______,  _______,  _______,    _______,  _______,  KC_0,     _______,  KC_VOLU,  QK_BOOT
   )
