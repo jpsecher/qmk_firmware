@@ -27,3 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Smart caps lock when both shifts are pressed
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+// Turn of Layer Lock after 30 seconds
+#define LAYER_LOCK_IDLE_TIMEOUT 30000
