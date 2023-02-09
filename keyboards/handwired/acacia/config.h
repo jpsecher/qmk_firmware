@@ -21,3 +21,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //#define TAPPING_TERM 200
 //#define PERMISSIVE_HOLD
+
+// Makes the lower-row tap-mods work better
+#define IGNORE_MOD_TAP_INTERRUPT
+
+// Smart caps lock when both shifts are pressed
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+// Turn of Layer Lock after 30 seconds
+#define LAYER_LOCK_IDLE_TIMEOUT 30000
