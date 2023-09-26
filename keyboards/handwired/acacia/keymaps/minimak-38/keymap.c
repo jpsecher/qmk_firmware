@@ -75,6 +75,7 @@ enum layer_names {
 #define RBRC_CTL LCTL_T(KC_RBRC)
 #define LBRC_GUI LGUI_T(KC_LBRC)
 #define RBRC_ALT LALT_T(KC_RBRC)
+#define LBRC_CTL LCTL_T(KC_LBRC)
 #define LBRC_AGR RALT_T(KC_LBRC)
 #define SCLN_CTL LCTL_T(KC_SCLN)
 #define QUOT_AGR RALT_T(KC_QUOT)
@@ -100,9 +101,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_SYM_NUM] = LAYOUT(
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
-    KC_GRV,   XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_DOT,   OSM_AGR,    KC_QUOT,  KC_4,     KC_5,     KC_6,     KC_EQL,   KC_SCLN,
-              GRV_GUI,  LBRC_ALT, _______,  RBRC_CTL,                       ONE_CTL,  KC_2,     THRE_ALT, SLSH_GUI,
-              KC_VOLD,  KC_LCBR,  _______,  KC_RCBR,  XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
+    KC_GRV,   XXXXXXX,  KC_GRV,   XXXXXXX,  KC_DOT,   OSM_AGR,    KC_QUOT,  KC_4,     KC_5,     KC_6,     KC_EQL,   KC_SCLN,
+              GRV_GUI,  RBRC_ALT, _______,  LBRC_CTL,                       ONE_CTL,  KC_2,     THRE_ALT, SLSH_GUI,
+              KC_VOLD,  KC_RCBR,  _______,  KC_LCBR,  XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
   ),
   [_FUNC] = LAYOUT(
     XXXXXXX,  QUIT,     CLOSE,    BUILD,    CTLR,     FIND,       CTLY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,   XXXXXXX,
