@@ -65,6 +65,8 @@ enum layer_names {
 #define CTLG LCTL(KC_G)
 #define CTLH LCTL(KC_H)
 #define CTLTAB LCTL(KC_TAB)
+#define ALTTAB LALT(KC_TAB)
+#define GUITAB LGUI(KC_TAB)
 #define CTLENT LCTL(KC_ENT)
 #define BUILD LCTL(KC_B)
 #define SWITCH LALT(KC_O)
@@ -90,20 +92,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALPHA] = LAYOUT(
     XXXXXXX,  KC_Q,     KC_W,     KC_B,     KC_R,     KC_F,       KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
     KC_TAB,   KC_A,     KC_S,     KC_D,     KC_T,     G_AGR,      H_AGR,    KC_N,     KC_E,     KC_L,     KC_K,     KC_ENT,
-              Z_GUI,    X_ALT,    C_SYM,    V_CTL,                          M_CTL,    KC_COMM,  DOT_ALT,  J_GUI,
+              Z_GUI,    X_ALT,    C_SYM,    V_CTL,                          M_CTL,    COMM_SYM, DOT_ALT,  J_GUI,
               KC_MNXT,  LOCK_NAV, OSM_LSFT, LOCK_ALP, XXXXXXX,    XXXXXXX,  QK_GESC,  SPC_CHNG, KC_BSPC,  KC_MPLY,  DB_TOGG
   ),
   [_NAVI] = LAYOUT(
     XXXXXXX,  CTLY,     XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,    KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,  XXXXXXX,
     _______,  UNDO,     CUT,      COPY,     PASTE,    KC_BTN2,    KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
-              KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                        PGDN_CTL, KC_PGUP,  KC_LALT,  KC_LGUI,
+              KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                        PGDN_CTL, PGUP_SYM, KC_LALT,  KC_LGUI,
               _______,  _______,  _______,  _______,  XXXXXXX,    XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
-    KC_GRV,   XXXXXXX,  KC_GRV,   XXXXXXX,  KC_DOT,   OSM_AGR,    KC_QUOT,  KC_4,     KC_5,     KC_6,     KC_EQL,   KC_SCLN,
-              GRV_GUI,  RBRC_ALT, _______,  LBRC_CTL,                       ONE_CTL,  KC_2,     THRE_ALT, SLSH_GUI,
-              KC_VOLD,  KC_RCBR,  _______,  KC_LCBR,  XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  OSM_AGR,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
+    GUITAB,   KC_GRV,   KC_LBRC,  KC_COLN,  KC_RBRC,  KC_QUOT,    KC_DOT,   KC_4,     KC_5,     KC_6,     KC_EQL,   KC_SCLN,
+              KC_LGUI,  KC_LALT,  KC_SCLN,  KC_LCTL,                        ONE_CTL,  KC_2,     THRE_ALT, SLSH_GUI,
+              KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
   ),
   [_FUNC] = LAYOUT(
     XXXXXXX,  QUIT,     CLOSE,    BUILD,    CTLR,     FIND,       CTLY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,   XXXXXXX,
