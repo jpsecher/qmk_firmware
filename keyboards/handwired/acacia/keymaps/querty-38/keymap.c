@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               _______,  _______,  _______,  _______,  XXXXXXX,    XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
-    GUITAB,   KC_GRV,   KC_LBRC,  KC_SCLN,  KC_RBRC,  XXXXXXX,    KC_DOT,   KC_4,     KC_5,     KC_6,     KC_EQL,   KC_QUOT,
+    XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_SCLN,  KC_RCBR,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
+    GUITAB,   KC_GRV,   KC_LBRC,  KC_COLN,  KC_RBRC,  XXXXXXX,    KC_DOT,   KC_4,     KC_5,     KC_6,     KC_EQL,   KC_QUOT,
               KC_LGUI,  KC_LALT,  OSM_AGR,  KC_LCTL,                        ONE_CTL,  KC_2,     THRE_ALT, SLSH_GUI,
               KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
   ),
