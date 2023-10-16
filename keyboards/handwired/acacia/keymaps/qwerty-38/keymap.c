@@ -64,6 +64,7 @@ enum layer_names {
 #define CTLU LCTL(KC_U)
 #define CTLY LCTL(KC_Y)
 #define CTLO LCTL(KC_O)
+#define CTLI LCTL(KC_I)
 #define CTLT LCTL(KC_T)
 #define CTLG LCTL(KC_G)
 #define CTLH LCTL(KC_H)
@@ -102,19 +103,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,    KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,  XXXXXXX,
     _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN2,    KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                        PGDN_CTL, PGUP_SYM, KC_LALT,  KC_LGUI,
-              _______,  LOCK_ALP, _______,  _______,  XXXXXXX,    XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
+              KC_MPRV,  LOCK_ALP, _______,  _______,  XXXXXXX,    XXXXXXX,  _______,  _______,  _______,  KC_MUTE,  EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
+    XXXXXXX,  KC_TILD,  KC_LT,    KC_DQUO,  KC_GT,    XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
     GUITAB,   KC_GRV,   KC_LBRC,  KC_QUOT,  KC_RBRC,  KC_RALT,    KC_DOT,   KC_4,     KC_5,     KC_6,     KC_SCLN,  KC_EQL,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                        ONE_CTL,  TWO_SYM,  THRE_ALT, SLSH_GUI,
-              KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
+              KC_VOLD,  KC_LCBR,  _______,  KC_RCBR,  XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
   ),
   [_FUNC] = LAYOUT(
     XXXXXXX,  CTLQ,     CTLW,     CTLE,     CTLR,     CTLT,       CTLY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,   XXXXXXX,
     CTLTAB,   CTLA,     CTLS,     CTLD,     CTLF,     CTLG,       CTLH,     KC_F4,    KC_F5,    KC_F6,    KC_F12,   CTLENT,
               KC_LGUI,  KC_LALT,  CTLK,     KC_LCTL,                        KC_F1,    KC_F2,    KC_F3,    CTLB,
-              KC_MPRV,  ALTO,     _______,  CTLO,     XXXXXXX,    XXXXXXX,  KC_PWR,   _______,  KC_F10,   KC_MNXT,  XXXXXXX
+              KC_MPRV,  CTLO,     _______,  CTLI,     XXXXXXX,    XXXXXXX,  KC_PWR,   _______,  KC_F10,   KC_MNXT,  XXXXXXX
   )
 };
 
