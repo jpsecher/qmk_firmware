@@ -37,9 +37,13 @@ enum layer_names {
 #define V_CTL LCTL_T(KC_V)
 #define G_AGR RALT_T(KC_G)
 #define H_AGR RALT_T(KC_H)
+#define N_CTL RCTL_T(KC_N)
 #define M_CTL RCTL_T(KC_M)
+#define M_SYM LT(_SYM_NUM, KC_M)
 #define COMM_SYM LT(_SYM_NUM, KC_COMM)
+#define COMM_ALT LALT_T(KC_COMM)
 #define DOT_ALT LALT_T(KC_DOT)
+#define DOT_GUI RGUI_T(KC_DOT)
 #define SLSH_GUI RGUI_T(KC_SLSH)
 #define B_GUI RGUI_T(KC_B)
 #define CTLZ LCTL(KC_Z)
@@ -90,8 +94,8 @@ enum layer_names {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALPHA] = LAYOUT(
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,       KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
-    KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,       KC_H,     KC_J,     KC_K,     KC_L,     KC_N,     KC_ENT,
-              Z_GUI,    X_ALT,    C_SYM,    V_CTL,                          M_CTL,    COMM_SYM, DOT_ALT,  B_GUI,
+    KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,       KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     KC_ENT,
+              Z_GUI,    X_ALT,    C_SYM,    V_CTL,                          N_CTL,    M_SYM,    COMM_ALT, DOT_GUI,
               KC_MNXT,  TT_NAV,   OSM_LSFT, OSM_AGR,  XXXXXXX,    XXXXXXX,  QK_GESC,  SPC_FUNC, KC_BSPC,  KC_MPLY,  DB_TOGG
   ),
   [_NAVI] = LAYOUT(
@@ -101,8 +105,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               _______,  LOCK_ALP, _______,  _______,  XXXXXXX,    XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_SCLN,  KC_RCBR,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
-    GUITAB,   KC_GRV,   KC_LBRC,  KC_COLN,  KC_RBRC,  KC_RALT,    KC_DOT,   KC_4,     KC_5,     KC_6,     KC_EQL,   KC_QUOT,
+    XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
+    GUITAB,   KC_GRV,   KC_LBRC,  KC_QUOT,  KC_RBRC,  KC_RALT,    KC_DOT,   KC_4,     KC_5,     KC_6,     KC_SCLN,  KC_EQL,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                        ONE_CTL,  TWO_SYM,  THRE_ALT, SLSH_GUI,
               KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
   ),
