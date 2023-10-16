@@ -25,8 +25,10 @@ enum layer_names {
 #define MO_SYM MO(_SYM_NUM)
 #define OSM_LSFT OSM(MOD_LSFT)
 #define SPC_FUNC LT(_FUNC, KC_SPC)
+#define ESC_NAV LT(_NAVI, KC_ESC)
 #define LOCK_ALP TO(_ALPHA)
 #define LOCK_NAV TO(_NAVI)
+#define TT_NAV TT(_NAVI)
 #define NUL_GUI LGUI_T(KC_0)
 #define OSM_AGR OSM(MOD_RALT)
 #define Z_GUI LGUI_T(KC_Z)
@@ -88,15 +90,15 @@ enum layer_names {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALPHA] = LAYOUT(
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,       KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
-    KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     G_AGR,      H_AGR,    KC_J,     KC_K,     KC_L,     KC_N,     KC_ENT,
+    KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,       KC_H,     KC_J,     KC_K,     KC_L,     KC_N,     KC_ENT,
               Z_GUI,    X_ALT,    C_SYM,    V_CTL,                          M_CTL,    COMM_SYM, DOT_ALT,  B_GUI,
-              KC_MNXT,  LOCK_NAV, OSM_LSFT, LOCK_ALP, XXXXXXX,    XXXXXXX,  QK_GESC,  SPC_FUNC, KC_BSPC,  KC_MPLY,  DB_TOGG
+              KC_MNXT,  TT_NAV,   OSM_LSFT, OSM_AGR,  XXXXXXX,    XXXXXXX,  QK_GESC,  SPC_FUNC, KC_BSPC,  KC_MPLY,  DB_TOGG
   ),
   [_NAVI] = LAYOUT(
     XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,    KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,  XXXXXXX,
     _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN2,    KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                        PGDN_CTL, PGUP_SYM, KC_LALT,  KC_LGUI,
-              _______,  _______,  _______,  _______,  XXXXXXX,    XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
+              _______,  LOCK_ALP, _______,  _______,  XXXXXXX,    XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
     XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_SCLN,  KC_RCBR,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_MINS,  XXXXXXX,
