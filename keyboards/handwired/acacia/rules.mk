@@ -7,4 +7,6 @@ NKRO_ENABLE = no            # N-Key Rollover
 LTO_ENABLE = yes            # Link-time optimisation for smaller code
 CAPS_WORD_ENABLE = yes
 RGBLIGHT_ENABLE = yes
+POINTING_DEVICE_ENABLE = yes
+POINTING_DEVICE_DRIVER = cirque_pinnacle_i2c
 
