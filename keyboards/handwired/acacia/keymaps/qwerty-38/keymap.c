@@ -104,13 +104,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,    KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,  XXXXXXX,
     _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN2,    KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                        PGDN_CTL, PGUP_SYM, KC_LALT,  KC_LGUI,
-              KC_MPRV,  _______,  _______,  LOCK_ALP, XXXXXXX,    XXXXXXX,  _______,  _______,  _______,  KC_MUTE,  EE_CLR
+              KC_MPRV,  _______,  _______,  _______,  XXXXXXX,    XXXXXXX,  LOCK_ALP, _______,  _______,  KC_MPLY,  EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_DQUO,  XXXXXXX,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_GRV,   XXXXXXX,
-    GUITAB,   KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,    KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
+    XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,    KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_GRV,   XXXXXXX,
+    GUITAB,   KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,    KC_COMM,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
               KC_LGUI,  KC_LALT,  SCLN_SYM, KC_LCTL,                        ONE_CTL,  TWO_SYM,  THRE_ALT, SLSH_GUI,
-              KC_VOLD,  KC_LCBR,  _______,  KC_RCBR,  XXXXXXX,    XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
+              KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,    XXXXXXX,  KC_DOT,   _______,  KC_0,     KC_VOLU,  QK_BOOT
   ),
   [_FUNC] = LAYOUT(
     XXXXXXX,  CTLQ,     CTLW,     CTLE,     CTLR,     CTLT,       CTLY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,   XXXXXXX,
