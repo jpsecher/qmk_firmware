@@ -25,28 +25,19 @@ enum layer_names {
 #define MO_SYM MO(_SYM_NUM)
 #define OSM_LSFT OSM(MOD_LSFT)
 #define SPC_FUNC LT(_FUNC, KC_SPC)
-#define ESC_NAV LT(_NAVI, KC_ESC)
 #define LOCK_ALP TO(_ALPHA)
 #define LOCK_NAV TO(_NAVI)
-#define TT_NAV TT(_NAVI)
-#define NUL_GUI LGUI_T(KC_0)
 #define OSM_AGR OSM(MOD_RALT)
 #define Z_GUI LGUI_T(KC_Z)
 #define X_ALT LALT_T(KC_X)
 #define C_SYM LT(_SYM_NUM, KC_C)
 #define V_CTL LCTL_T(KC_V)
-#define G_AGR RALT_T(KC_G)
-#define H_AGR RALT_T(KC_H)
 #define N_CTL RCTL_T(KC_N)
-#define M_CTL RCTL_T(KC_M)
 #define M_SYM LT(_SYM_NUM, KC_M)
-#define COMM_SYM LT(_SYM_NUM, KC_COMM)
 #define SCLN_SYM LT(_SYM_NUM, KC_SCLN)
 #define COMM_ALT LALT_T(KC_COMM)
-#define DOT_ALT LALT_T(KC_DOT)
 #define DOT_GUI RGUI_T(KC_DOT)
 #define SLSH_GUI RGUI_T(KC_SLSH)
-#define B_GUI RGUI_T(KC_B)
 #define CTLZ LCTL(KC_Z)
 #define CTLX LCTL(KC_X)
 #define CTLC LCTL(KC_C)
@@ -57,63 +48,42 @@ enum layer_names {
 #define CTLA LCTL(KC_A)
 #define CTLS LCTL(KC_S)
 #define CTLD LCTL(KC_D)
-#define CTLP LCTL(KC_P)
 #define CTLK LCTL(KC_K)
 #define CTLR LCTL(KC_R)
 #define CTLL LCTL(KC_L)
 #define CTLE LCTL(KC_E)
-#define CTLU LCTL(KC_U)
 #define CTLY LCTL(KC_Y)
 #define CTLO LCTL(KC_O)
 #define CTLI LCTL(KC_I)
 #define CTLT LCTL(KC_T)
 #define CTLG LCTL(KC_G)
 #define CTLH LCTL(KC_H)
-#define CTLTAB LCTL(KC_TAB)
-#define CTLEQL LCTL(KC_EQL)
-#define ALTTAB LALT(KC_TAB)
-#define GUITAB LGUI(KC_TAB)
-#define ENT_CTL RCTL_T(KC_ENT)
-#define TAB_CTL LCTL_T(KC_TAB)
-#define SLSH_CTL LCTL_T(KC_SLSH)
 #define CTLB LCTL(KC_B)
-#define ALTO LALT(KC_O)
 #define PGDN_CTL RCTL_T(KC_PGDN)
 #define PGUP_SYM LT(_SYM_NUM, KC_PGUP)
-#define GRV_GUI RGUI_T(KC_GRV)
-#define LBRC_ALT LALT_T(KC_LBRC)
-#define RBRC_CTL LCTL_T(KC_RBRC)
-#define LBRC_GUI LGUI_T(KC_LBRC)
-#define RBRC_ALT LALT_T(KC_RBRC)
-#define LBRC_CTL LCTL_T(KC_LBRC)
-#define LBRC_AGR RALT_T(KC_LBRC)
-#define SCLN_CTL LCTL_T(KC_SCLN)
-#define QUOT_AGR RALT_T(KC_QUOT)
-#define MINS_AGR RALT_T(KC_MINS)
 #define ONE_CTL RCTL_T(KC_1)
 #define TWO_SYM LT(_SYM_NUM, KC_2)
 #define THRE_ALT LALT_T(KC_3)
-#define EQL_CTL RCTL_T(KC_EQL)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALPHA] = LAYOUT(
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
-    TAB_CTL,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     ENT_CTL,
+    KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     KC_ENT,
               Z_GUI,    X_ALT,    C_SYM,    V_CTL,                         N_CTL,    M_SYM,    COMM_ALT, DOT_GUI,
-              KC_MNXT,  OSM_AGR,  OSM_LSFT, TT_NAV,   XXXXXXX,   XXXXXXX,  KC_ESC,   SPC_FUNC, KC_BSPC,  KC_MPLY,  DB_TOGG
+              KC_MNXT,  OSM_AGR,  OSM_LSFT, LOCK_NAV, XXXXXXX,   XXXXXXX,  KC_ESC,   SPC_FUNC, KC_BSPC,  KC_MPLY,  DB_TOGG
   ),
   [_NAVI] = LAYOUT(
     XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,  XXXXXXX,
     _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
-              KC_MPRV,  _______,  _______,  _______,  XXXXXXX,   XXXXXXX,  LOCK_ALP, _______,  _______,  KC_MPLY,  EE_CLR
+              _______,  _______,  _______,  _______,  XXXXXXX,   XXXXXXX,  LOCK_ALP, _______,  _______,  _______,  EE_CLR
   ),
   [_SYM_NUM] = LAYOUT(
     XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,   KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_GRV,   XXXXXXX,
-    SLSH_CTL, KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,   KC_COMM,  KC_4,     KC_5,     KC_6,     KC_MINS,  EQL_CTL,
+    KC_SLSH,  KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
               KC_LGUI,  KC_LALT,  SCLN_SYM, KC_LCTL,                       ONE_CTL,  TWO_SYM,  THRE_ALT, SLSH_GUI,
-              KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,   XXXXXXX,  KC_DOT,   _______,  KC_0,     KC_VOLU,  QK_BOOT
+              KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,   XXXXXXX,  KC_COMM,  _______,  KC_0,     KC_VOLU,  QK_BOOT
   ),
   [_FUNC] = LAYOUT(
     XXXXXXX,  CTLQ,     CTLW,     CTLE,     CTLR,     CTLT,      CTLY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,   XXXXXXX,
