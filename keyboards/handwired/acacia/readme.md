@@ -13,7 +13,9 @@ Flashing example for this keyboard:
 
     make handwired/acacia:default:flash
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.
+See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.  If the chip is completely blank, then you might have to forcefully erase it like
+
+    dfu-programmer atmega32u2 erase --force
 
 ## Bootloader
 
