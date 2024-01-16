@@ -27,3 +27,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Smart caps lock cancels after 10 seconds.
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 #define CAPS_WORD_IDLE_TIMEOUT 10000
+
+#define WS2812_DI_PIN B5
+#define RGBLED_NUM 6
+// #define RGBLIGHT_EFFECT_RGB_TEST
+#define RGBLIGHT_LAYERS
+#define RGBLIGHT_LAYER_BLINK

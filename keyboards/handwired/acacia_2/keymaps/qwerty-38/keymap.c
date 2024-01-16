@@ -143,6 +143,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
+const rgblight_segment_t PROGMEM base_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_OFF});
+const rgblight_segment_t PROGMEM navi_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_BLUE});
+const rgblight_segment_t PROGMEM symb_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_ORANGE});
+const rgblight_segment_t PROGMEM func_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_CYAN});
+const rgblight_segment_t PROGMEM caps_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_PURPLE});
+const rgblight_segment_t * const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+  base_layer, navi_layer, symb_layer, func_layer, caps_layer
+);
+
+void keyboard_post_init_user(void) {
+  rgblight_layers = rgb_layers;
+}
+
+layer_state_t default_layer_state_set_user(layer_state_t state) {
+  rgblight_set_layer_state(0, layer_state_cmp(state, _ALPHA) || layer_state_cmp(state, _ALPHA_MAC));
+  return state;
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+  rgblight_set_layer_state(1, layer_state_cmp(state, _NAVI) || layer_state_cmp(state, _NAVI_MAC));
+  rgblight_set_layer_state(2, layer_state_cmp(state, _SYM_NUM));
+  rgblight_set_layer_state(3, layer_state_cmp(state, _FUNC) || layer_state_cmp(state, _FUNC_MAC));
+  return state;
+}
+
+void caps_word_set_user(bool active) {
+  rgblight_set_layer_state(4, active);
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // Store the current modifier state in the variable for later reference.
   static uint8_t mod_state;
