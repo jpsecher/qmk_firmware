@@ -47,7 +47,7 @@ enum layer_names {
 #define SCLN_SYM LT(_SYM_NUM, KC_SCLN)
 #define COMM_ALT LALT_T(KC_COMM)
 #define DOT_GUI RGUI_T(KC_DOT)
-#define SLSH_GUI RGUI_T(KC_SLSH)
+#define BSLS_GUI RGUI_T(KC_BSLS)
 #define CTLZ LCTL(KC_Z)
 #define CTLX LCTL(KC_X)
 #define CTLC LCTL(KC_C)
@@ -135,19 +135,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_MPRV,  GUII,     _______,  GUIO,      KC_PWR,   _______,  KC_F10,   KC_MNXT
   ),
   [_SYM_NUM] = LAYOUT(
-              XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,   KC_BSLS,  KC_7,     KC_8,     KC_9,     KC_GRV,
+              XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,   KC_COMM,  KC_7,     KC_8,     KC_9,     KC_GRV,
     KC_SLSH,  KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
-              KC_LGUI,  KC_LALT,  SCLN_SYM, KC_LCTL,                       ONE_CTL,  TWO_SYM,  THRE_ALT, SLSH_GUI,
-                        KC_VOLD,  KC_LT,    _______,  KC_GT,     KC_COMM,  _______,  KC_0,     KC_VOLU
+              KC_LGUI,  KC_LALT,  SCLN_SYM, KC_LCTL,                       ONE_CTL,  TWO_SYM,  THRE_ALT, BSLS_GUI,
+                        KC_VOLD,  KC_LT,    _______,  KC_GT,     KC_SLSH,  _______,  KC_0,     KC_VOLU
   )
 };
 
 
 const rgblight_segment_t PROGMEM base_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_OFF});
-const rgblight_segment_t PROGMEM navi_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_BLUE});
-const rgblight_segment_t PROGMEM symb_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_ORANGE});
-const rgblight_segment_t PROGMEM func_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_CYAN});
-const rgblight_segment_t PROGMEM caps_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_PURPLE});
+const rgblight_segment_t PROGMEM navi_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_ORANGE});
+const rgblight_segment_t PROGMEM symb_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_BLUE});
+const rgblight_segment_t PROGMEM func_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_PURPLE});
+const rgblight_segment_t PROGMEM caps_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_CYAN});
 const rgblight_segment_t * const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
   base_layer, navi_layer, symb_layer, func_layer, caps_layer
 );
