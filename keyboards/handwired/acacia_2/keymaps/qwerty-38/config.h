@@ -30,6 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define WS2812_DI_PIN B5
 #define RGBLED_NUM 6
-// #define RGBLIGHT_EFFECT_RGB_TEST
 #define RGBLIGHT_LAYERS
 #define RGBLIGHT_LAYER_BLINK
+
+#define POINTING_DEVICE_ROTATION_90
+#define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
+// #define POINTING_DEVICE_DEBUG

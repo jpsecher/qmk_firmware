@@ -15,7 +15,7 @@
         "vid": "0x03EB",
         "pid": "0x2FF4",
         "device_version": "1.0.0",
-        "max_power": 50
+        "max_power": 80
     },
     "layouts": {
         "LAYOUT": {

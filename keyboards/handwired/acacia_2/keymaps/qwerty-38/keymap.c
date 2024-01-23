@@ -114,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               MAC,      XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,
     _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
-                        _______,  LCK_ALP,  _______,  _______,   _______,  _______,  _______,  _______
+                        _______,  LCK_ALP,  _______,  XXXXXXX,   _______,  _______,  _______,  _______
   ),
   [_FUNC] = LAYOUT(
               CTLQ,     CTLW,     CTLE,     CTLR,     CTLT,      CTLY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,
@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               NOMAC,    XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,
     _______,  GUIZ,     GUIX,     GUIC,     GUIV,     KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
-                        _______,  LCK_ALPM, _______,  _______,   _______,  _______,  _______,  _______
+                        _______,  LCK_ALPM, _______,  XXXXXXX,   _______,  _______,  _______,  _______
   ),
   [_FUNC_MAC] = LAYOUT(
               GUIQ,     GUIW,     GUIE,     GUIR,     GUIT,      GUIY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,
@@ -136,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_SYM_NUM] = LAYOUT(
               XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,   KC_COMM,  KC_7,     KC_8,     KC_9,     KC_GRV,
-    KC_SLSH,  KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
+    _______,  KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
               KC_LGUI,  KC_LALT,  SCLN_SYM, KC_LCTL,                       ONE_CTL,  TWO_SYM,  THRE_ALT, BSLS_GUI,
                         KC_VOLD,  KC_LT,    _______,  KC_GT,     KC_SLSH,  _______,  KC_0,     KC_VOLU
   )
