@@ -40,8 +40,10 @@ enum layer_names {
 #define OSM_AGR OSM(MOD_RALT)
 #define Z_GUI LGUI_T(KC_Z)
 #define X_ALT LALT_T(KC_X)
+#define LBRC_ALT LALT_T(KC_LBRC)
 #define C_SYM LT(_SYM_NUM, KC_C)
 #define V_CTL LCTL_T(KC_V)
+#define RBRC_CTL LCTL_T(KC_RBRC)
 #define N_CTL RCTL_T(KC_N)
 #define M_SYM LT(_SYM_NUM, KC_M)
 #define SCLN_SYM LT(_SYM_NUM, KC_SCLN)
@@ -69,6 +71,8 @@ enum layer_names {
 #define CTLG LCTL(KC_G)
 #define CTLH LCTL(KC_H)
 #define CTLB LCTL(KC_B)
+#define CTLP LCTL(KC_P)
+#define CTLU LCTL(KC_U)
 #define GUIZ LGUI(KC_Z)
 #define GUIX LGUI(KC_X)
 #define GUIC LGUI(KC_C)
@@ -90,6 +94,8 @@ enum layer_names {
 #define GUIG LGUI(KC_G)
 #define GUIH LGUI(KC_H)
 #define GUIB LGUI(KC_B)
+#define GUIP LGUI(KC_P)
+#define GUIU LGUI(KC_U)
 #define PGDN_CTL RCTL_T(KC_PGDN)
 #define PGUP_SYM LT(_SYM_NUM, KC_PGUP)
 #define ONE_CTL RCTL_T(KC_1)
@@ -118,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_FUNC] = LAYOUT(
               CTLQ,     CTLW,     CTLE,     CTLR,     CTLT,      CTLY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,
-    _______,  CTLA,     CTLS,     CTLD,     CTLF,     CTLG,      CTLH,     KC_F4,    KC_F5,    KC_F6,    KC_F12,   _______,
+    CTLU,     CTLA,     CTLS,     CTLD,     CTLF,     CTLG,      CTLH,     KC_F4,    KC_F5,    KC_F6,    KC_F12,   CTLP,
               KC_LGUI,  KC_LALT,  CTLK,     KC_LCTL,                       KC_F1,    KC_F2,    KC_F3,    CTLB,
                         KC_MPRV,  CTLO,     _______,  CTLI,      KC_PWR,   _______,  KC_F10,   KC_MNXT
   ),
@@ -130,15 +136,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_FUNC_MAC] = LAYOUT(
               GUIQ,     GUIW,     GUIE,     GUIR,     GUIT,      GUIY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,
-    _______,  GUIA,     GUIS,     GUID,     GUIF,     GUIG,      GUIH,     KC_F4,    KC_F5,    KC_F6,    KC_F12,   _______,
+    GUIU,     GUIA,     GUIS,     GUID,     GUIF,     GUIG,      GUIH,     KC_F4,    KC_F5,    KC_F6,    KC_F12,   GUIP,
               KC_LGUI,  KC_LALT,  GUIK,     KC_LCTL,                       KC_F1,    KC_F2,    KC_F3,    GUIB,
-                        KC_MPRV,  GUII,     _______,  GUIO,      KC_PWR,   _______,  KC_F10,   KC_MNXT
+                        KC_MPRV,  GUIO,     _______,  GUII,      KC_PWR,   _______,  KC_F10,   KC_MNXT
   ),
   [_SYM_NUM] = LAYOUT(
               XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,   KC_COMM,  KC_7,     KC_8,     KC_9,     KC_GRV,
-    _______,  KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
-              KC_LGUI,  KC_LALT,  SCLN_SYM, KC_LCTL,                       ONE_CTL,  TWO_SYM,  THRE_ALT, BSLS_GUI,
-                        KC_VOLD,  KC_LPRN,  _______,  KC_RPRN,   KC_SLSH,  _______,  KC_0,     KC_VOLU
+    _______,  KC_COLN,  KC_LPRN,  KC_QUOT,  KC_RPRN,  KC_SCLN,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
+              KC_LGUI,  LBRC_ALT, XXXXXXX,  RBRC_CTL,                      ONE_CTL,  TWO_SYM,  THRE_ALT, BSLS_GUI,
+                        KC_VOLD,  KC_SCLN,  _______,  KC_COLN,   KC_SLSH,  _______,  KC_0,     KC_VOLU
   )
 };
 
@@ -146,7 +152,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const rgblight_segment_t PROGMEM base_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_OFF});
 const rgblight_segment_t PROGMEM navi_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_BLUE});
 const rgblight_segment_t PROGMEM symb_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_OFF});
-const rgblight_segment_t PROGMEM func_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_OFF});
+const rgblight_segment_t PROGMEM func_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_PURPLE});
 const rgblight_segment_t PROGMEM caps_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_CYAN});
 const rgblight_segment_t * const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
   base_layer, navi_layer, symb_layer, func_layer, caps_layer
