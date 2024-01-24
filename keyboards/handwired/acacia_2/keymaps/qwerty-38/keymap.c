@@ -111,8 +111,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_MNXT,  OSM_AGR,  OSM_LSFT, TT_NAVM,   KC_ESC,   SPC_FUNM, KC_BSPC,  KC_MPLY
   ),
   [_NAVI] = LAYOUT(
-              MAC,      XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,
-    _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
+              MAC,      XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,
+    _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
                         _______,  LCK_ALP,  _______,  XXXXXXX,   _______,  _______,  _______,  _______
   ),
@@ -123,8 +123,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_MPRV,  CTLO,     _______,  CTLI,      KC_PWR,   _______,  KC_F10,   KC_MNXT
   ),
   [_NAVI_MAC] = LAYOUT(
-              NOMAC,    XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,
-    _______,  GUIZ,     GUIX,     GUIC,     GUIV,     KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
+              NOMAC,    XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,
+    _______,  GUIZ,     GUIX,     GUIC,     GUIV,     KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
                         _______,  LCK_ALPM, _______,  XXXXXXX,   _______,  _______,  _______,  _______
   ),
@@ -138,15 +138,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,   KC_COMM,  KC_7,     KC_8,     KC_9,     KC_GRV,
     _______,  KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
               KC_LGUI,  KC_LALT,  SCLN_SYM, KC_LCTL,                       ONE_CTL,  TWO_SYM,  THRE_ALT, BSLS_GUI,
-                        KC_VOLD,  KC_LT,    _______,  KC_GT,     KC_SLSH,  _______,  KC_0,     KC_VOLU
+                        KC_VOLD,  KC_LPRN,  _______,  KC_RPRN,   KC_SLSH,  _______,  KC_0,     KC_VOLU
   )
 };
 
 
 const rgblight_segment_t PROGMEM base_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_OFF});
-const rgblight_segment_t PROGMEM navi_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_ORANGE});
-const rgblight_segment_t PROGMEM symb_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_BLUE});
-const rgblight_segment_t PROGMEM func_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_PURPLE});
+const rgblight_segment_t PROGMEM navi_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_BLUE});
+const rgblight_segment_t PROGMEM symb_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_OFF});
+const rgblight_segment_t PROGMEM func_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_OFF});
 const rgblight_segment_t PROGMEM caps_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 6, HSV_CYAN});
 const rgblight_segment_t * const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
   base_layer, navi_layer, symb_layer, func_layer, caps_layer
