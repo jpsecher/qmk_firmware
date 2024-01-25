@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_MNXT,  OSM_AGR,  OSM_LSFT, TT_NAVM,   KC_ESC,   SPC_FUNM, KC_BSPC,  KC_MPLY
   ),
   [_NAVI] = LAYOUT(
-              MAC,      XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,
+              MAC,      XXXXXXX,  KC_WH_U,  KC_WH_D,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  KC_ACL0,  KC_ACL1,
     _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
                         _______,  LCK_ALP,  _______,  XXXXXXX,   _______,  _______,  _______,  _______
@@ -129,7 +129,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_MPRV,  CTLO,     _______,  CTLI,      KC_PWR,   _______,  KC_F10,   KC_MNXT
   ),
   [_NAVI_MAC] = LAYOUT(
-              NOMAC,    XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,
+              NOMAC,    XXXXXXX,  KC_WH_U,  KC_WH_D,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  KC_ACL0,  KC_ACL1,
     _______,  GUIZ,     GUIX,     GUIC,     GUIV,     KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
                         _______,  LCK_ALPM, _______,  XXXXXXX,   _______,  _______,  _______,  _______
