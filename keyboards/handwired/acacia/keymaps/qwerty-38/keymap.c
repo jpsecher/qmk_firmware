@@ -34,14 +34,18 @@ enum layer_names {
 #define LCK_NAVM TO(_NAVI_MAC)
 #define TT_NAVM TT(_NAVI_MAC)
 #define MO_SYM MO(_SYM_NUM)
+#define MO_ALP MO(_ALPHA)
+#define MO_ALPM MO(_ALPHA_MAC)
 #define OSM_LSFT OSM(MOD_LSFT)
 #define SPC_FUNC LT(_FUNC, KC_SPC)
 #define SPC_FUNM LT(_FUNC_MAC, KC_SPC)
 #define OSM_AGR OSM(MOD_RALT)
 #define Z_GUI LGUI_T(KC_Z)
 #define X_ALT LALT_T(KC_X)
+#define LBRC_ALT LALT_T(KC_LBRC)
 #define C_SYM LT(_SYM_NUM, KC_C)
 #define V_CTL LCTL_T(KC_V)
+#define RBRC_CTL LCTL_T(KC_RBRC)
 #define N_CTL RCTL_T(KC_N)
 #define M_SYM LT(_SYM_NUM, KC_M)
 #define SCLN_SYM LT(_SYM_NUM, KC_SCLN)
@@ -111,10 +115,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_MNXT,  OSM_AGR,  OSM_LSFT, TT_NAVM,  XXXXXXX,   XXXXXXX,  KC_ESC,   SPC_FUNM, KC_BSPC,  KC_MPLY,  DB_TOGG
   ),
   [_NAVI] = LAYOUT(
-    XXXXXXX,  MAC,      XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  MAC,      XXXXXXX,  KC_WH_U,  KC_WH_D,  KC_BTN1,   KC_HOME,  KC_WH_D,  KC_WH_U,  KC_ACL0,  KC_ACL1,  XXXXXXX,
     _______,  CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
-              _______,  LCK_ALP,  _______,  _______,  XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
+              _______,  LCK_ALP,  _______,  MO_ALP,   XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
   ),
   [_FUNC] = LAYOUT(
     XXXXXXX,  CTLQ,     CTLW,     CTLE,     CTLR,     CTLT,      CTLY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,   XXXXXXX,
@@ -123,22 +127,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_MPRV,  CTLO,     _______,  CTLI,     XXXXXXX,   XXXXXXX,  KC_PWR,   _______,  KC_F10,   KC_MNXT,  XXXXXXX
   ),
   [_NAVI_MAC] = LAYOUT(
-    XXXXXXX,  NOMAC,    XXXXXXX,  KC_ACL0,  KC_ACL1,  KC_BTN1,   KC_HOME,  KC_WH_D,  KC_WH_U,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  NOMAC,    XXXXXXX,  KC_WH_D,  KC_WH_U,  KC_BTN1,   KC_HOME,  KC_WH_U,  KC_WH_D,  KC_ACL0,  KC_ACL1,  XXXXXXX,
     _______,  GUIZ,     GUIX,     GUIC,     GUIV,     KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
-              _______,  LCK_ALPM, _______,  _______,  XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
+              _______,  LCK_ALPM, _______,  MO_ALPM,  XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
   ),
   [_FUNC_MAC] = LAYOUT(
     XXXXXXX,  GUIQ,     GUIW,     GUIE,     GUIR,     GUIT,      GUIY,     KC_F7,    KC_F8,    KC_F9,    KC_F11,   XXXXXXX,
     _______,  GUIA,     GUIS,     GUID,     GUIF,     GUIG,      GUIH,     KC_F4,    KC_F5,    KC_F6,    KC_F12,   _______,
               KC_LGUI,  KC_LALT,  GUIK,     KC_LCTL,                       KC_F1,    KC_F2,    KC_F3,    GUIB,
-              KC_MPRV,  GUII,     _______,  GUIO,     XXXXXXX,   XXXXXXX,  KC_PWR,   _______,  KC_F10,   KC_MNXT,  XXXXXXX
+              KC_MPRV,  GUIO,     _______,  GUII,     XXXXXXX,   XXXXXXX,  KC_PWR,   _______,  KC_F10,   KC_MNXT,  XXXXXXX
   ),
   [_SYM_NUM] = LAYOUT(
     XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  XXXXXXX,   KC_COMM,  KC_7,     KC_8,     KC_9,     KC_GRV,   XXXXXXX,
-    _______,  KC_COLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  XXXXXXX,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
-              KC_LGUI,  KC_LALT,  SCLN_SYM, KC_LCTL,                       ONE_CTL,  TWO_SYM,  THRE_ALT, BSLS_GUI,
-              KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,   XXXXXXX,  KC_SLSH,  _______,  KC_0,     KC_VOLU,  QK_BOOT
+    _______,  KC_COLN,  KC_LPRN,  KC_QUOT,  KC_RPRN,  KC_SCLN,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
+              KC_LGUI,  LBRC_ALT, XXXXXXX,  RBRC_CTL,                      ONE_CTL,  TWO_SYM,  THRE_ALT, BSLS_GUI,
+              KC_VOLD,  KC_SCLN,  _______,  KC_COLN,  XXXXXXX,   XXXXXXX,  KC_SLSH,  _______,  KC_0,     KC_VOLU,  QK_BOOT
   )
 };
 
