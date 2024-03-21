@@ -16,28 +16,18 @@
 #include QMK_KEYBOARD_H
 
 enum layer_names {
-  _ALPHA,
   _ALPHA_MAC,
-  _NAVI,
-  _FUNC,
   _NAVI_MAC,
   _FUNC_MAC,
   _SYM_NUM
 };
 
-#define NOMAC DF(_ALPHA)
-#define MAC DF(_ALPHA_MAC)
-#define LCK_ALP TO(_ALPHA)
-#define LCK_NAV TO(_NAVI)
-#define TT_NAV TT(_NAVI)
 #define LCK_ALPM TO(_ALPHA_MAC)
 #define LCK_NAVM TO(_NAVI_MAC)
 #define TT_NAVM TT(_NAVI_MAC)
 #define MO_SYM MO(_SYM_NUM)
-#define MO_ALP MO(_ALPHA)
 #define MO_ALPM MO(_ALPHA_MAC)
 #define OSM_LSFT OSM(MOD_LSFT)
-#define SPC_FUNC LT(_FUNC, KC_SPC)
 #define SPC_FUNM LT(_FUNC_MAC, KC_SPC)
 #define OSM_AGR OSM(MOD_RALT)
 #define Z_GUI LGUI_T(KC_Z)
@@ -52,27 +42,6 @@ enum layer_names {
 #define COMM_ALT LALT_T(KC_COMM)
 #define DOT_GUI RGUI_T(KC_DOT)
 #define BSLS_GUI RGUI_T(KC_BSLS)
-#define CTLZ LCTL(KC_Z)
-#define CTLX LCTL(KC_X)
-#define CTLC LCTL(KC_C)
-#define CTLV LCTL(KC_V)
-#define CTLQ LCTL(KC_Q)
-#define CTLW LCTL(KC_W)
-#define CTLF LCTL(KC_F)
-#define CTLA LCTL(KC_A)
-#define CTLS LCTL(KC_S)
-#define CTLD LCTL(KC_D)
-#define CTLK LCTL(KC_K)
-#define CTLR LCTL(KC_R)
-#define CTLL LCTL(KC_L)
-#define CTLE LCTL(KC_E)
-#define CTLY LCTL(KC_Y)
-#define CTLO LCTL(KC_O)
-#define CTLI LCTL(KC_I)
-#define CTLT LCTL(KC_T)
-#define CTLG LCTL(KC_G)
-#define CTLH LCTL(KC_H)
-#define CTLB LCTL(KC_B)
 #define GUIZ LGUI(KC_Z)
 #define GUIX LGUI(KC_X)
 #define GUIC LGUI(KC_C)
@@ -105,32 +74,14 @@ enum layer_names {
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_ALPHA] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     XXXXXXX,  XXXXXXX,
-    KC_Q,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     KC_P,
-              Z_GUI,    X_ALT,    C_SYM,    V_CTL,                         N_CTL,    M_SYM,    COMM_ALT, DOT_GUI,
-              KC_MNXT,  OSM_AGR,  OSM_LSFT, TT_NAV,   XXXXXXX,   XXXXXXX,  KC_ESC,   SPC_FUNC, KC_BSPC,  KC_MPLY,  DB_TOGG
-  ),
   [_ALPHA_MAC] = LAYOUT(
     XXXXXXX,  XXXXXXX,  KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     XXXXXXX,  XXXXXXX,
     KC_Q,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     KC_P,
               Z_GUI,    X_ALT,    C_SYM,    V_CTL,                         N_CTL,    M_SYM,    COMM_ALT, DOT_GUI,
               KC_MNXT,  OSM_AGR,  OSM_LSFT, TT_NAVM,  XXXXXXX,   XXXXXXX,  KC_ESC,   SPC_FUNM, KC_BSPC,  KC_MPLY,  DB_TOGG
   ),
-  [_NAVI] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  MAC,      KC_WH_U,  KC_WH_D,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  KC_ACL0,  XXXXXXX,  XXXXXXX,
-    KC_TAB,   CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   KC_ENT,
-              KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
-              _______,  LCK_ALP,  _______,  XXXXXXX,  XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
-  ),
-  [_FUNC] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  CTLW,     CTLE,     CTLR,     CTLT,      CTLY,     KC_F7,    KC_F8,    KC_F9,    XXXXXXX,  XXXXXXX,
-    KC_TAB,   CTLA,     CTLS,     CTLD,     CTLF,     CTLG,      CTLH,     KC_F4,    KC_F5,    KC_F6,    KC_F12,   KC_ENT,
-              KC_LGUI,  KC_LALT,  CTLK,     KC_LCTL,                       F1_CTL,   KC_F2,    F3_ALT,   F11_GUI,
-              KC_MPRV,  CTLO,     _______,  CTLI,     XXXXXXX,   XXXXXXX,  KC_PWR,   _______,  KC_F10,   KC_MNXT,  XXXXXXX
-  ),
   [_NAVI_MAC] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  NOMAC,    KC_WH_D,  KC_WH_U,  KC_BTN2,   KC_HOME,  KC_WH_U,  KC_WH_D,  KC_ACL0,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  KC_BTN3,  KC_WH_D,  KC_WH_U,  KC_BTN2,   KC_HOME,  KC_WH_U,  KC_WH_D,  KC_ACL0,  XXXXXXX,  XXXXXXX,
     KC_TAB,   GUIZ,     GUIX,     GUIC,     GUIV,     KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   KC_ENT,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
               _______,  LCK_ALPM, _______,  XXXXXXX,  XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
