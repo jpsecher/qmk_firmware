@@ -71,6 +71,7 @@ enum layer_names {
 #define F1_CTL RCTL_T(KC_F1)
 #define F3_ALT LALT_T(KC_F3)
 #define F11_GUI RGUI_T(KC_F11)
+#define ESC_AGR RALT_T(KC_ESC)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -78,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,  KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     XXXXXXX,  XXXXXXX,
     KC_Q,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     KC_P,
               Z_GUI,    X_ALT,    C_SYM,    V_CTL,                         N_CTL,    M_SYM,    COMM_ALT, DOT_GUI,
-              KC_MNXT,  OSM_AGR,  OSM_LSFT, TT_NAVM,  XXXXXXX,   XXXXXXX,  KC_ESC,   SPC_FUNM, KC_BSPC,  KC_MPLY,  DB_TOGG
+              KC_MNXT,  ESC_AGR,  OSM_LSFT, TT_NAVM,  XXXXXXX,   XXXXXXX,  KC_TAB,   SPC_FUNM, KC_BSPC,  KC_MPLY,  DB_TOGG
   ),
   [_NAVI_MAC] = LAYOUT(
     XXXXXXX,  XXXXXXX,  KC_BTN3,  KC_WH_D,  KC_WH_U,  KC_BTN2,   KC_HOME,  KC_WH_U,  KC_WH_D,  KC_ACL0,  XXXXXXX,  XXXXXXX,
