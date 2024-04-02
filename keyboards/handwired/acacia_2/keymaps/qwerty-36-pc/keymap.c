@@ -85,10 +85,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_MNXT,  ESC_AGR,  OSM_LSFT, TT_NAV,    KC_TAB,   SPC_FUNC, KC_BSPC,  KC_MPLY
   ),
   [_NAVI] = LAYOUT(
-              XXXXXXX,  KC_BTN3,  KC_WH_U,  KC_WH_D,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  KC_ACL0,  XXXXXXX,
+              XXXXXXX,  KC_BTN3,  KC_WH_U,  KC_WH_D,  KC_BTN2,   KC_HOME,  KC_WH_D,  KC_WH_U,  QK_REP,  XXXXXXX,
     KC_TAB,   CTLZ,     CTLX,     CTLC,     CTLV,     KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   KC_ENT,
               KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
-                        _______,  LCK_ALP,  _______,  XXXXXXX,   _______,  _______,  _______,  _______
+                        _______,  LCK_ALP,  _______,  OSL_ALP,   _______,  _______,  _______,  _______
   ),
   [_FUNC] = LAYOUT(
               XXXXXXX,  CTLW,     CTLE,     CTLR,     CTLT,      CTLY,     KC_F7,    KC_F8,    KC_F9,    XXXXXXX,
