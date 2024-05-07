@@ -17,6 +17,11 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
     dfu-programmer atmega32u2 erase --force
 
+## Acacia-2
+
+    make handwired/acacia_2:qwerty-36-pc
+    make handwired/acacia_2:qwerty-36-pc:flash
+
 ## Bootloader
 
 Enter the bootloader by using the small buttons on the PCB: press the RESET button while connected to QMK Toolbox.
