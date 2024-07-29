@@ -34,5 +34,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_LAYER_BLINK
 
 #define POINTING_DEVICE_ROTATION_90
-#define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
-// #define POINTING_DEVICE_DEBUG
