@@ -38,7 +38,7 @@ enum layer_names {
 #define LBRC_ALT LALT_T(KC_LBRC)
 #define C_SYM LT(_SYM_NUM, KC_C)
 #define V_CTL LCTL_T(KC_V)
-#define RBRC_CTL LCTL_T(KC_RBRC)
+#define RBRC_CTL RCTL_T(KC_RBRC)
 #define N_CTL RCTL_T(KC_N)
 #define M_SYM LT(_SYM_NUM, KC_M)
 #define SCLN_SYM LT(_SYM_NUM, KC_SCLN)
@@ -126,8 +126,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_SYM_NUM] = LAYOUT(
     XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  KC_TILD,   KC_SLSH,  KC_7,     KC_8,     KC_9,     XXXXXXX,  XXXXXXX,
-    KC_ESC,   KC_SCLN,  KC_LBRC,  KC_QUOT,  KC_RBRC,  KC_GRV,    KC_0,     KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
-              KC_BSLS,  KC_LPRN,  KC_COLN,  KC_RPRN,                       KC_1,     KC_2,     KC_3,     KC_DOT,
+    KC_ESC,   KC_COLN,  LBRC_ALT, QUOT_GUI, RBRC_CTL, KC_GRV,    KC_0,     KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
+              KC_BSLS,  KC_LPRN,  KC_SCLN,  KC_RPRN,                       KC_1,     KC_2,     KC_3,     KC_DOT,
               KC_VOLD,  _______,  KC_LT,    KC_GT,    XXXXXXX,   XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  KC_VOLU,  DB_TOGG
   )
 };
