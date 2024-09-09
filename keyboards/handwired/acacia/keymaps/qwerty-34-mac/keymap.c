@@ -30,6 +30,7 @@ enum layer_names {
 #define MO_SYM MO(_SYM_NUM)
 #define MO_ALPM MO(_ALPHA_MAC)
 #define OSM_LSFT OSM(MOD_LSFT)
+#define OSM_RSFT OSM(MOD_RSFT)
 #define SPC_FUNM LT(_FUNC_MAC, KC_SPC)
 #define OSM_AGR OSM(MOD_RALT)
 #define Z_GUI LGUI_T(KC_Z)
@@ -88,6 +89,7 @@ enum layer_names {
 #define CTLA RCTL(KC_A)
 #define TAB_FUNM LT(_FUNC_MAC, KC_TAB)
 #define SPC_SYM LT(_SYM_NUM, KC_SPC)
+#define B_FUNM LT(_FUNC_MAC, KC_B)
 #define P_AGR RALT_T(KC_P)
 #define L_ALT LALT_T(KC_L)
 #define J_CTL RCTL_T(KC_J)
@@ -97,6 +99,10 @@ enum layer_names {
 #define S_ALT LALT_T(KC_S)
 #define A_AGR RALT_T(KC_A)
 #define B_SHFT LSFT_T(KC_B)
+#define F11_AGR RALT_T(KC_F11)
+#define F6_ALT LALT_T(KC_F6)
+#define F5_GUI RGUI_T(KC_F5)
+#define F4_CTL RCTL_T(KC_F4)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -120,9 +126,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_FUNC_MAC] = LAYOUT(
     XXXXXXX,  KC_F12,   KC_F9,    KC_F8,    KC_F7,    _______,   _______,  KC_7,     KC_8,     KC_9,     _______,  XXXXXXX,
-    _______,  KC_F11,   KC_F6,    KC_F5,    KC_F4,    _______,   _______,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
+    _______,  F11_AGR,  F6_ALT,   F5_GUI,   F4_CTL,   _______,   _______,  KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
               KC_F10,   KC_F3,    KC_F2,    KC_F1,                         KC_1,     KC_2,     KC_3,     KC_PLUS,
-              QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,   XXXXXXX,  KC_COMM,  KC_0,     KC_DOT,   KC_PWR,   DB_TOGG
+              QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,   XXXXXXX,  KC_COMM,  KC_DOT,   KC_0,     KC_PWR,   DB_TOGG
   ),
   [_SYM_NUM] = LAYOUT(
     XXXXXXX,  _______,  KC_LCBR,  KC_DQUO,  KC_RCBR,  KC_GRV,    KC_QUES,  KC_AMPR,  KC_ASTR,  KC_PIPE,  _______,  XXXXXXX,
