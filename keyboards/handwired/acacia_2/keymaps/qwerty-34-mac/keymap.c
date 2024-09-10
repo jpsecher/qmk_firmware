@@ -125,15 +125,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         _______,  _______,  _______,  KC_B,      KC_TAB,   KC_SPC,   _______,  _______
   ),
   [_FUNC_MAC] = LAYOUT(
-              KC_F12,   KC_F9,    KC_F8,    KC_F7,    _______,   _______,  KC_7,     KC_8,     KC_9,     _______,
-    _______,  F11_AGR,  F6_ALT,   F5_GUI,   F4_CTL,   _______,   _______,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_MINS,  KC_EQL,
+              KC_F12,   KC_F9,    KC_F8,    KC_F7,    _______,   KC_QUES,  KC_7,     KC_8,     KC_9,     _______,
+    _______,  F11_AGR,  F6_ALT,   F5_GUI,   F4_CTL,   _______,   KC_COLN,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_MINS,  KC_EQL,
               KC_F10,   KC_F3,    KC_F2,    KC_F1,                         KC_1,     KC_2,     KC_3,     KC_PLUS,
-                        QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,   KC_COMM,  KC_0,     KC_DOT,   KC_PWR
+                        QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,   KC_COMM,  KC_DOT,   KC_0,     KC_PWR
   ),
   [_SYM_NUM] = LAYOUT(
-              _______,  KC_LCBR,  KC_DQUO,  KC_RCBR,  KC_GRV,    KC_QUES,  KC_AMPR,  KC_ASTR,  KC_PIPE,  _______,
-    KC_PIPE,  KC_COLN,  LBRC_ALT, QUOT_GUI, RBRC_CTL, KC_LT,     KC_GT,    KC_DLR,   KC_PERC,  KC_CIRC,  KC_UNDS,  _______,
-              _______,  KC_LPRN,  KC_SCLN,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  XXXXXXX,
+              _______,  KC_LCBR,  KC_DQUO,  KC_RCBR,  KC_GRV,    KC_QUES,  KC_AMPR,  KC_ASTR,  KC_UNDS,  _______,
+    KC_PIPE,  KC_LT,    LBRC_ALT, QUOT_GUI, RBRC_CTL, KC_GT,     KC_COLN,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_MINS,  KC_EQL,
+              _______,  KC_LPRN,  KC_SCLN,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PLUS,
                         KC_VOLD,  KC_BSLS,  KC_SLSH,  KC_TILD,   XXXXXXX,  _______,  XXXXXXX,  KC_VOLU
   )
 };
