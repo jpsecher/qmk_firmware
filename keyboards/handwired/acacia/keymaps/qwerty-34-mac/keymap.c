@@ -107,33 +107,33 @@ enum layer_names {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALPHA_MAC] = LAYOUT(
-    XXXXXXX,  KC_ESC,   KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_BSPC,  XXXXXXX,
-    KC_Q,     A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_ENT,
+    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_BSPC,  XXXXXXX,
+    KC_ESC,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_ENT,
               KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
               KC_MNXT,  OSM_LSFT, TT_NAVM,  B_FUNM,   XXXXXXX,   XXXXXXX,  TAB_FUNM, SPC_SYM,  OSM_RSFT, KC_MPLY,  DB_TOGG
   ),
   [_NAVI_MAC] = LAYOUT(
-    XXXXXXX,  _______,  KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     _______,  XXXXXXX,
-    GUIY,     KC_LSFT,  KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_WH_D,  _______,
+    XXXXXXX,  GUIY,     KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     _______,  XXXXXXX,
+    _______,  KC_LSFT,  KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_WH_D,  _______,
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     KC_WH_U,
               KC_MPRV,  _______,  OSL_ALPM, LCK_ALPM, XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  KC_MNXT,  DB_TOGG
   ),
   [_ALPHA_OL] = LAYOUT(
-    XXXXXXX,  _______,  KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     _______,  XXXXXXX,
-    KC_Q,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
+    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     _______,  XXXXXXX,
+    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
               KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
               _______,  _______,  _______,  KC_B,     XXXXXXX,   XXXXXXX,  KC_TAB,   KC_SPC,   _______,  _______,  DB_TOGG
   ),
   [_FUNC_MAC] = LAYOUT(
-    XXXXXXX,  KC_F12,   KC_F9,    KC_F8,    KC_F7,    _______,   _______,  KC_7,     KC_8,     KC_9,     _______,  XXXXXXX,
-    _______,  F11_AGR,  F6_ALT,   F5_GUI,   F4_CTL,   _______,   _______,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_MINS,  KC_EQL,
+    XXXXXXX,  KC_F12,   KC_F9,    KC_F8,    KC_F7,    XXXXXXX,   KC_PIPE,  KC_7,     KC_8,     KC_9,     _______,  XXXXXXX,
+    _______,  F11_AGR,  F6_ALT,   F5_GUI,   F4_CTL,   KC_COLN,   KC_QUES,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_MINS,  KC_EQL,
               KC_F10,   KC_F3,    KC_F2,    KC_F1,                         KC_1,     KC_2,     KC_3,     KC_PLUS,
-              QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,   XXXXXXX,  KC_COMM,  KC_0,     KC_DOT,   KC_PWR,   DB_TOGG
+              QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,   XXXXXXX,  KC_COMM,  KC_DOT,   KC_0,     KC_PWR,   DB_TOGG
   ),
   [_SYM_NUM] = LAYOUT(
-    XXXXXXX,  _______,  KC_LCBR,  KC_DQUO,  KC_RCBR,  KC_GRV,    KC_QUES,  KC_AMPR,  KC_ASTR,  KC_PIPE,  _______,  XXXXXXX,
-    KC_PIPE,  KC_COLN,  LBRC_ALT, QUOT_GUI, RBRC_CTL, KC_LT,     KC_GT,    KC_DLR,   KC_PERC,  KC_CIRC,  KC_UNDS,  _______,
-              _______,  KC_LPRN,  KC_SCLN,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  XXXXXXX,
+    XXXXXXX,  KC_LT,    KC_LCBR,  KC_DQUO,  KC_RCBR,  KC_GT,     KC_PIPE,  KC_AMPR,  KC_ASTR,  KC_UNDS,  _______,  XXXXXXX,
+    _______,  KC_GRV,   LBRC_ALT, QUOT_GUI, RBRC_CTL, KC_COLN,   KC_QUES,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_MINS,  KC_EQL,
+              _______,  KC_LPRN,  KC_SCLN,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PLUS,
               KC_VOLD,  KC_BSLS,  KC_SLSH,  KC_TILD,  XXXXXXX,   XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  KC_VOLU,  DB_TOGG
   )
 };
