@@ -125,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               _______,  _______,  _______,  KC_B,     XXXXXXX,   XXXXXXX,  KC_TAB,   KC_SPC,   _______,  _______,  DB_TOGG
   ),
   [_FUNC_MAC] = LAYOUT(
-    XXXXXXX,  KC_F12,   KC_F9,    KC_F8,    KC_F7,    XXXXXXX,   KC_PIPE,  KC_7,     KC_8,     KC_9,     _______,  XXXXXXX,
+    XXXXXXX,  KC_F12,   KC_F9,    KC_F8,    KC_F7,    KC_COLN,   KC_PIPE,  KC_7,     KC_8,     KC_9,     _______,  XXXXXXX,
     _______,  F11_AGR,  F6_ALT,   F5_GUI,   F4_CTL,   KC_COLN,   KC_QUES,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_MINS,  KC_EQL,
               KC_F10,   KC_F3,    KC_F2,    KC_F1,                         KC_1,     KC_2,     KC_3,     KC_PLUS,
               QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,   XXXXXXX,  KC_COMM,  KC_DOT,   KC_0,     KC_PWR,   DB_TOGG
