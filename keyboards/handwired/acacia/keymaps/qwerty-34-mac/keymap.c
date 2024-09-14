@@ -105,8 +105,10 @@ enum layer_names {
 #define F4_CTL RCTL_T(KC_F4)
 
 enum {
-  // Save buffer in helix
-  SAVE = SAFE_RANGE
+  // Save buffer in editor
+  SAVE = SAFE_RANGE,
+  // Quit editor
+  QUIT
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -119,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_NAVI_MAC] = LAYOUT(
     XXXXXXX,  XXXXXXX,  KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     _______,  XXXXXXX,
     GUIY,     KC_LSFT,  KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
-              GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     KC_WH_U,
+              GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
               KC_MPRV,  _______,  OSL_ALPM, LCK_ALPM, XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  KC_MNXT,  DB_TOGG
   ),
   [_ALPHA_OL] = LAYOUT(
@@ -148,32 +150,40 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   mod_state = get_mods();
   switch (keycode) {
     case SAVE:
-      SEND_STRING(SS_TAP(X_ESC) ":w" SS_TAP(X_ENT));
+      if (record->event.pressed) {
+        SEND_STRING(SS_TAP(X_ESC) ":w" SS_TAP(X_ENT));
+        return false;
+      }
+    case QUIT:
+      if (record->event.pressed) {
+        SEND_STRING(SS_TAP(X_ESC) ":q" SS_TAP(X_ENT));
+        return false;
+      }
     case KC_BSPC:
       {
-      // Keep track of whether the delete key status is registered.
-      static bool delkey_registered;
-      if (record->event.pressed) {
-        if (mod_state & MOD_MASK_SHIFT) {
-          // Make sure that Shift is not applied to the KC_DEL keycode.
-          del_mods(MOD_MASK_SHIFT);
-          register_code(KC_DEL);
-          // Update the boolean variable to reflect the status of KC_DEL
-          delkey_registered = true;
-          // Reapplying modifier state so that the held shift key(s)
-          // still work even after having tapped the Backspace/Delete key.
-          set_mods(mod_state);
-          return false;
-        }
-      } else { // on release of KC_BSPC
-        // In case KC_DEL is still being sent even after the release of KC_BSPC
-        if (delkey_registered) {
-          unregister_code(KC_DEL);
-          delkey_registered = false;
-          return false;
+        // Keep track of whether the delete key status is registered.
+        static bool delkey_registered;
+        if (record->event.pressed) {
+          if (mod_state & MOD_MASK_SHIFT) {
+            // Make sure that Shift is not applied to the KC_DEL keycode.
+            del_mods(MOD_MASK_SHIFT);
+            register_code(KC_DEL);
+            // Update the boolean variable to reflect the status of KC_DEL
+            delkey_registered = true;
+            // Reapplying modifier state so that the held shift key(s)
+            // still work even after having tapped the Backspace/Delete key.
+            set_mods(mod_state);
+            return false;
+          }
+        } else { // on release of KC_BSPC
+          // In case KC_DEL is still being sent even after the release of KC_BSPC
+          if (delkey_registered) {
+            unregister_code(KC_DEL);
+            delkey_registered = false;
+            return false;
+          }
         }
       }
-    }
   }
   return true;
 }
