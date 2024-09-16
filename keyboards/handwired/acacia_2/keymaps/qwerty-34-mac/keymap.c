@@ -105,6 +105,13 @@ enum layer_names {
 #define F4_CTL RCTL_T(KC_F4)
 
 
+enum {
+  // Save buffer in editor
+  SAVE = SAFE_RANGE,
+  // Quit editor
+  QUIT
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALPHA_MAC] = LAYOUT(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_BSPC,
@@ -113,9 +120,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_MNXT,  OSM_LSFT, TT_NAVM,  B_FUNM,    TAB_FUNM, SPC_SYM,  OSM_RSFT, KC_MPLY
   ),
   [_NAVI_MAC] = LAYOUT(
-              GUIY,     KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     _______,
-    _______,  KC_LSFT,  KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_WH_D,  _______,
-              GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     KC_WH_U,
+              XXXXXXX,  KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     _______,
+    GUIY,     KC_LSFT,  KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
+              GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
                         KC_MPRV,  _______,  OSL_ALPM, LCK_ALPM,  _______,  _______,  _______,  KC_MNXT
   ),
   [_ALPHA_OL] = LAYOUT(
@@ -125,16 +132,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         _______,  _______,  _______,  KC_B,      KC_TAB,   KC_SPC,   _______,  _______
   ),
   [_FUNC_MAC] = LAYOUT(
-              KC_F12,   KC_F9,    KC_F8,    KC_F7,    KC_COLN,   KC_PIPE,  KC_7,     KC_8,     KC_9,     _______,
+              KC_F12,   KC_F9,    KC_F8,    KC_F7,    KC_SCLN,   KC_SLSH,  KC_7,     KC_8,     KC_9,     _______,
     _______,  F11_AGR,  F6_ALT,   F5_GUI,   F4_CTL,   KC_COLN,   KC_QUES,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_MINS,  KC_EQL,
               KC_F10,   KC_F3,    KC_F2,    KC_F1,                         KC_1,     KC_2,     KC_3,     KC_PLUS,
                         QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,   KC_COMM,  KC_DOT,   KC_0,     KC_PWR
   ),
   [_SYM_NUM] = LAYOUT(
-              KC_LT,    KC_LCBR,  KC_DQUO,  KC_RCBR,  KC_GT,     KC_PIPE,  KC_AMPR,  KC_ASTR,  KC_UNDS,  _______,
-    _______,  KC_GRV,   LBRC_ALT, QUOT_GUI, RBRC_CTL, KC_COLN,   KC_QUES,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_MINS,  KC_EQL,
-              _______,  KC_LPRN,  KC_SCLN,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PLUS,
-                        KC_VOLD,  KC_BSLS,  KC_SLSH,  KC_TILD,   XXXXXXX,  _______,  XXXXXXX,  KC_VOLU
+              KC_LCTL,  KC_GRV,   KC_LCBR,  KC_RCBR,  KC_SCLN,   KC_PIPE,  KC_AMPR,  KC_ASTR,  KC_UNDS,  _______,
+    KC_LT,    KC_GT,    KC_DQUO,  KC_LPRN,  KC_RPRN,  KC_COLN,   KC_QUES,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_MINS,  KC_EQL,
+              KC_LGUI,  KC_QUOT,  KC_LBRC,  KC_RBRC,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PLUS,
+                        KC_VOLD,  KC_BSLS,  KC_SLSH,  KC_TILD,   XXXXXXX,  _______,  KC_LALT,  KC_VOLU
   )
 };
 
@@ -173,6 +180,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   static uint8_t mod_state;
   mod_state = get_mods();
   switch (keycode) {
+    case SAVE:
+      if (record->event.pressed) {
+        SEND_STRING(SS_TAP(X_ESC) ":w" SS_TAP(X_ENT));
+        return false;
+      }
+    case QUIT:
+      if (record->event.pressed) {
+        SEND_STRING(SS_TAP(X_ESC) ":q" SS_TAP(X_ENT));
+        return false;
+      }
     case KC_BSPC:
       {
       // Keep track of whether the delete key status is registered.
