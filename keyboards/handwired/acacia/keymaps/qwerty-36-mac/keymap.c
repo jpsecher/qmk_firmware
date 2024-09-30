@@ -30,7 +30,10 @@ enum layer_names {
 #define MO_SYM MO(_SYM_NUM)
 #define MO_ALPM MO(_ALPHA_MAC)
 #define OSM_LSFT OSM(MOD_LSFT)
+#define OSM_RSFT OSM(MOD_RSFT)
+#define OSL_FUNM OSL(_FUNC_MAC)
 #define SPC_FUNM LT(_FUNC_MAC, KC_SPC)
+#define ESC_FUNM LT(_FUNC_MAC, KC_ESC)
 #define OSM_AGR OSM(MOD_RALT)
 #define Z_GUI LGUI_T(KC_Z)
 #define B_GUI RGUI_T(KC_B)
@@ -38,7 +41,7 @@ enum layer_names {
 #define LBRC_ALT LALT_T(KC_LBRC)
 #define C_SYM LT(_SYM_NUM, KC_C)
 #define V_CTL LCTL_T(KC_V)
-#define RBRC_CTL LCTL_T(KC_RBRC)
+#define RBRC_CTL RCTL_T(KC_RBRC)
 #define N_CTL RCTL_T(KC_N)
 #define M_SYM LT(_SYM_NUM, KC_M)
 #define SCLN_SYM LT(_SYM_NUM, KC_SCLN)
@@ -75,73 +78,114 @@ enum layer_names {
 #define F1_CTL RCTL_T(KC_F1)
 #define F3_ALT LALT_T(KC_F3)
 #define F11_GUI RGUI_T(KC_F11)
-#define ESC_AGR RALT_T(KC_ESC)
+#define MINS_AGR RALT_T(KC_MINS)
+#define SIX_ALT LALT_T(KC_6)
+#define FIVE_GUI RGUI_T(KC_5)
+#define FOUR_CTL RCTL_T(KC_4)
+#define QUOT_GUI RGUI_T(KC_QUOT)
+#define GRV_AGR RALT_T(KC_GRV)
+#define AGRO RALT(KC_O)
+#define AGRQUOT RALT(KC_QUOT)
+#define AGRA RALT(KC_A)
+#define CTLE RCTL(KC_E)
+#define CTLA RCTL(KC_A)
+#define TAB_FUNM LT(_FUNC_MAC, KC_TAB)
+#define SPC_SYM LT(_SYM_NUM, KC_SPC)
+#define B_FUNM LT(_FUNC_MAC, KC_B)
+#define P_AGR RALT_T(KC_P)
+#define L_ALT LALT_T(KC_L)
+#define J_CTL RCTL_T(KC_J)
+#define K_GUI RGUI_T(KC_K)
+#define F_CTL LCTL_T(KC_F)
+#define D_GUI LGUI_T(KC_D)
+#define S_ALT LALT_T(KC_S)
+#define A_AGR RALT_T(KC_A)
+#define B_SHFT LSFT_T(KC_B)
+#define F5_AGR RALT_T(KC_F5)
+#define F6_ALT LALT_T(KC_F6)
+#define F7_GUI LGUI_T(KC_F7)
+#define F8_CTL LCTL_T(KC_F8)
 
+enum {
+  // Save buffer in editor
+  SAVE = SAFE_RANGE,
+  // Quit editor
+  QUIT
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALPHA_MAC] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     XXXXXXX,  XXXXXXX,
-    KC_Q,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     KC_ENT,
-              Z_GUI,    X_ALT,    C_SYM,    V_CTL,                         N_CTL,    M_SYM,    COMM_ALT, B_GUI,
-              KC_MNXT,  ESC_AGR,  OSM_LSFT, TT_NAVM,  XXXXXXX,   XXXXXXX,  KC_TAB,   SPC_FUNM, KC_BSPC,  KC_MPLY,  DB_TOGG
+    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_BSPC,  XXXXXXX,
+    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_ENT,
+              KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
+              KC_MNXT,  OSM_LSFT, TT_NAVM,  B_FUNM,   XXXXXXX,   XXXXXXX,  ESC_FUNM, SPC_SYM,  OSM_RSFT, KC_MPLY,  DB_TOGG
   ),
   [_NAVI_MAC] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  KC_BTN3,  KC_WH_D,  KC_WH_U,  KC_BTN2,   KC_HOME,  KC_WH_U,  KC_WH_D,  QK_REP,   XXXXXXX,  XXXXXXX,
-    GUIU,     GUIZ,     GUIX,     GUIC,     GUIV,     KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   _______,
-              KC_LGUI,  KC_LALT,  MO_SYM,   KC_LCTL,                       PGDN_CTL, PGUP_SYM, KC_LALT,  KC_RGUI,
-              _______,  LCK_ALPM, _______,  OSL_ALPM, XXXXXXX,   XXXXXXX,  _______,  _______,  _______,  _______,  EE_CLR
+    XXXXXXX,  GUIY,     KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     _______,  XXXXXXX,
+    _______,  KC_LSFT,  KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
+              GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
+              KC_MPRV,  _______,  OSL_ALPM, OSL_FUNM, XXXXXXX,   XXXXXXX,  LCK_ALPM, _______,  _______,  KC_MNXT,  DB_TOGG
   ),
   [_ALPHA_OL] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     XXXXXXX,  XXXXXXX,
-    KC_Q,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
-              KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_B,
-              _______,  KC_ESC,   _______,  XXXXXXX,  XXXXXXX,   XXXXXXX,  _______,  KC_SPC,   KC_BSPC,  KC_MPLY,  DB_TOGG
+    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     _______,  XXXXXXX,
+    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
+              KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
+              _______,  _______,  _______,  KC_B,     XXXXXXX,   XXXXXXX,  KC_ESC,   KC_SPC,   _______,  _______,  DB_TOGG
   ),
   [_FUNC_MAC] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  GUIW,     GUIE,     GUIR,     GUIT,      GUIY,     KC_F7,    KC_F8,    KC_F9,    XXXXXXX,  XXXXXXX,
-    GUIQ,     GUIA,     GUIS,     GUID,     GUIF,     GUIG,      GUIH,     KC_F4,    KC_F5,    KC_F6,    KC_F12,   _______,
-              KC_LGUI,  KC_LALT,  GUIK,     KC_LCTL,                       F1_CTL,   KC_F2,    F3_ALT,   F11_GUI,
-              KC_MPRV,  GUIO,     _______,  GUII,     XXXXXXX,   XXXXXXX,  KC_PWR,   _______,  KC_F10,   KC_MNXT,  XXXXXXX
+    XXXXXXX,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_SCLN,   KC_SLSH,  KC_7,     KC_8,     KC_9,     _______,  XXXXXXX,
+    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_COLN,   KC_MINS,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
+              KC_F9,    KC_F10,   KC_F11,   KC_F12,                        KC_1,     KC_2,     KC_3,     KC_DOT,
+              QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,   XXXXXXX,  KC_QUES,  KC_COMM,  KC_0,     KC_PWR,   DB_TOGG
   ),
   [_SYM_NUM] = LAYOUT(
-    XXXXXXX,  XXXXXXX,  KC_LCBR,  KC_DQUO,  KC_RCBR,  KC_TILD,   KC_COMM,  KC_7,     KC_8,     KC_9,     XXXXXXX,  XXXXXXX,
-    KC_GRV,   KC_COLN,  KC_LPRN,  KC_QUOT,  KC_RPRN,  KC_SCLN,   KC_DOT,   KC_4,     KC_5,     KC_6,     KC_MINS,  KC_EQL,
-              KC_LGUI,  LBRC_ALT, KC_DOT,   RBRC_CTL,                      ONE_CTL,  TWO_SYM,  THRE_ALT, BSLS_GUI,
-              KC_VOLD,  KC_LT,    _______,  KC_GT,    XXXXXXX,   XXXXXXX,  KC_SLSH,  KC_0,     KC_BSPC,  KC_VOLU,  QK_BOOT
-  )  
+    XXXXXXX,  KC_LCTL,  KC_GRV,   KC_LCBR,  KC_RCBR,  KC_SCLN,   KC_PIPE,  KC_AMPR,  KC_ASTR,  KC_UNDS,  _______,  XXXXXXX,
+    KC_GT,    KC_LT,    KC_DQUO,  KC_LPRN,  KC_RPRN,  KC_COLN,   KC_MINS,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
+              KC_LGUI,  KC_QUOT,  KC_LBRC,  KC_RBRC,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_QUES,
+              KC_VOLD,  KC_BSLS,  KC_SLSH,  KC_TILD,  XXXXXXX,   XXXXXXX,  XXXXXXX,  _______,  KC_LALT,  KC_VOLU,  DB_TOGG
+  )
 };
-
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // Store the current modifier state in the variable for later reference.
   static uint8_t mod_state;
   mod_state = get_mods();
   switch (keycode) {
+    case SAVE:
+      if (record->event.pressed) {
+        SEND_STRING(SS_TAP(X_ESC) ":w" SS_TAP(X_ENT));
+        return false;
+      }
+    case QUIT:
+      if (record->event.pressed) {
+        SEND_STRING(SS_TAP(X_ESC) ":q" SS_TAP(X_ENT));
+        return false;
+      }
     case KC_BSPC:
       {
-      // Keep track of whether the delete key status is registered.
-      static bool delkey_registered;
-      if (record->event.pressed) {
-        if (mod_state & MOD_MASK_SHIFT) {
-          // Make sure that Shift is not applied to the KC_DEL keycode.
-          del_mods(MOD_MASK_SHIFT);
-          register_code(KC_DEL);
-          // Update the boolean variable to reflect the status of KC_DEL
-          delkey_registered = true;
-          // Reapplying modifier state so that the held shift key(s)
-          // still work even after having tapped the Backspace/Delete key.
-          set_mods(mod_state);
-          return false;
-        }
-      } else { // on release of KC_BSPC
-        // In case KC_DEL is still being sent even after the release of KC_BSPC
-        if (delkey_registered) {
-          unregister_code(KC_DEL);
-          delkey_registered = false;
-          return false;
+        // Keep track of whether the delete key status is registered.
+        static bool delkey_registered;
+        if (record->event.pressed) {
+          if (mod_state & MOD_MASK_SHIFT) {
+            // Make sure that Shift is not applied to the KC_DEL keycode.
+            del_mods(MOD_MASK_SHIFT);
+            register_code(KC_DEL);
+            // Update the boolean variable to reflect the status of KC_DEL
+            delkey_registered = true;
+            // Reapplying modifier state so that the held shift key(s)
+            // still work even after having tapped the Backspace/Delete key.
+            set_mods(mod_state);
+            return false;
+          }
+        } else { // on release of KC_BSPC
+          // In case KC_DEL is still being sent even after the release of KC_BSPC
+          if (delkey_registered) {
+            unregister_code(KC_DEL);
+            delkey_registered = false;
+            return false;
+          }
         }
       }
-    }
   }
   return true;
 }
