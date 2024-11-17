@@ -133,14 +133,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               _______,  _______,  _______,  KC_B,     XXXXXXX,   XXXXXXX,  KC_ESC,   KC_SPC,   _______,  _______,  DB_TOGG
   ),
   [_FUNC_MAC] = LAYOUT(
-    XXXXXXX,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_SCLN,   KC_MINS,  KC_7,     KC_8,     KC_9,     _______,  XXXXXXX,
-    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_COLN,   KC_SLSH,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
+    XXXXXXX,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_QUES,   KC_COLN,  KC_7,     KC_8,     KC_9,     KC_BSPC,  XXXXXXX,
+    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_SCLN,   KC_MINS,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
               KC_F9,    KC_F10,   KC_F11,   KC_F12,                        KC_1,     KC_2,     KC_3,     KC_DOT,
               QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,   XXXXXXX,  KC_QUES,  KC_COMM,  KC_0,     KC_PWR,   DB_TOGG
   ),
   [_SYM_NUM] = LAYOUT(
-    XXXXXXX,  KC_LCTL,  KC_GRV,   KC_LCBR,  KC_RCBR,  KC_SCLN,   KC_MINS,  KC_AMPR,  KC_ASTR,  KC_UNDS,  _______,  XXXXXXX,
-    KC_GT,    KC_LT,    KC_DQUO,  KC_LPRN,  KC_RPRN,  KC_COLN,   KC_QUES,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
+    XXXXXXX,  KC_LCTL,  KC_GRV,   KC_LCBR,  KC_RCBR,  KC_QUES,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_BSPC,  XXXXXXX,
+    KC_GT,    KC_LT,    KC_DQUO,  KC_LPRN,  KC_RPRN,  KC_SCLN,   KC_MINS,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
               KC_LGUI,  KC_QUOT,  KC_LBRC,  KC_RBRC,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
               KC_VOLD,  KC_BSLS,  KC_SLSH,  KC_TILD,  XXXXXXX,   XXXXXXX,  XXXXXXX,  _______,  KC_LALT,  KC_VOLU,  DB_TOGG
   )
