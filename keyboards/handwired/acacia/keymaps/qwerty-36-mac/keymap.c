@@ -39,12 +39,12 @@ enum layer_names {
 #define B_GUI RGUI_T(KC_B)
 #define X_ALT LALT_T(KC_X)
 
-#define V_NUM LT(_NUM_MAC, KC_V)
-#define N_NUM LT(_NUM_MAC, KC_N)
-#define C_NAV LT(_NAV_MAC, KC_C)
-#define M_NAV LT(_NAV_MAC, KC_M)
-#define X_SYM LT(_SYMBOLS, KC_X)
-#define COMM_SYM LT(_SYMBOLS, KC_COMM)
+#define V_SYM LT(_SYMBOLS, KC_V)
+#define N_SYM LT(_SYMBOLS, KC_N)
+#define C_NUM LT(_NUM_MAC, KC_C)
+#define M_NUM LT(_NUM_MAC, KC_M)
+#define X_NAV LT(_NAV_MAC, KC_X)
+#define COMM_NAV LT(_NAV_MAC, KC_COMM)
 
 
 #define LBRC_ALT LALT_T(KC_LBRC)
@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_BSPC,  XXXXXXX,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_ENT,
-              KC_Z,     X_SYM,    C_NAV,    V_NUM,                         N_NUM,    M_NAV,    COMM_SYM,  KC_DOT,
+              KC_Z,     X_NAV,    C_NUM,    V_SYM,                         N_SYM,    M_NUM,    COMM_NAV,  KC_DOT,
               KC_MNXT,  OSM_LSFT, TT_NAVM,  B_FUNM,   XXXXXXX,   XXXXXXX,  ESC_FUNM, SPC_SYM,  OSM_LSFT, KC_MPLY,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
