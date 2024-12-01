@@ -34,6 +34,8 @@ enum layer_names {
 #define OSL_FUNM OSL(_NUM_MAC)
 #define SPC_FUNM LT(_NUM_MAC, KC_SPC)
 #define ESC_FUNM LT(_NUM_MAC, KC_ESC)
+#define BCK_NUM LT(_NUM_MAC, KC_BSPC)
+#define ESC_NAV LT(_NAV_MAC, KC_ESC)
 #define OSM_AGR OSM(MOD_RALT)
 #define Z_GUI LGUI_T(KC_Z)
 #define B_GUI RGUI_T(KC_B)
@@ -126,36 +128,34 @@ enum {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
-    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_BSPC,  XXXXXXX,
+    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     XXXXXXX,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_SFT,     H_SFT,    J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_ENT,
-              KC_Z,     X_NAV,    C_NUM,    V_SYM,                         N_SYM,    M_NUM,    COMM_NAV, KC_DOT,
-              KC_MNXT,  OSM_LSFT, TT_NAVM,  B_FUNM,   XXXXXXX,   XXXXXXX,  ESC_FUNM, SPC_SYM,  OSM_LSFT, KC_MPLY,  DB_TOGG
+              KC_Z,     KC_X,     C_NUM,    V_SYM,                         N_SYM,    M_NUM,    KC_COMM,  KC_DOT,
+              KC_MNXT,  XXXXXXX,  OSM_LSFT, ESC_NAV,  XXXXXXX,   XXXXXXX,  BCK_NUM,  SPC_SYM,  XXXXXXX,  KC_MPLY,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
-    XXXXXXX,  GUIY,     KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     _______,  XXXXXXX,
-    _______,  KC_LSFT,  KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
-              GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
-              KC_MPRV,  _______,  OSL_ALPM, OSL_FUNM, XXXXXXX,   XXXXXXX,  LCK_ALPM, _______,  _______,  KC_MNXT,  DB_TOGG
+    _______,  GUIY,     KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
+    _______,  GUIZ,     GUIX,     GUIC,     GUIV,     KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
+              _______,  KC_LALT,  KC_LGUI,  KC_LCTL,                       AGRQUOT,  AGRO,     AGRA,     QUIT,
+              KC_MPRV,  _______,  _______,  LCK_ALPM, _______,   _______,  _______,  _______,  _______,  _______,  DB_TOGG
   ),
   [_ALP_OVL] = LAYOUT(
-    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     _______,  XXXXXXX,
+    _______,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     _______,
     _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
               KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
-              _______,  _______,  _______,  KC_B,     XXXXXXX,   XXXXXXX,  KC_ESC,   KC_SPC,   _______,  _______,  DB_TOGG
+              _______,  _______,  _______,  LCK_ALPM, _______,   _______,  KC_BSPC,  KC_SPC,   _______,  _______,  DB_TOGG
   ),
   [_NUM_MAC] = LAYOUT(
-    XXXXXXX,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_QUES,   KC_MINS,  KC_7,     KC_8,     KC_9,     KC_BSPC,  XXXXXXX,
+    _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_QUES,   KC_MINS,  KC_7,     KC_8,     KC_9,     QK_LLCK,  _______,
     _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_SCLN,   KC_COLN,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
               KC_F9,    KC_F10,   KC_F11,   KC_F12,                        KC_1,     KC_2,     KC_3,     KC_DOT,
-              QK_BOOT,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,   XXXXXXX,  KC_QUES,  KC_COMM,  KC_0,     KC_PWR,   DB_TOGG
+              QK_BOOT,  _______,  KC_0,     LCK_ALPM, _______,   _______,  _______,  KC_0,     _______,  KC_PWR,   DB_TOGG
   ),
   [_SYMBOLS] = LAYOUT(
-    print("Discarding")
-    print(record_data)
-    XXXXXXX,  KC_LCTL,  KC_GRV,   KC_LCBR,  KC_RCBR,  KC_QUES,   KC_MINS,  KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_BSPC,  XXXXXXX,
+    _______,  XXXXXXX,  KC_GRV,   KC_LCBR,  KC_RCBR,  KC_QUES,   KC_MINS,  KC_AMPR,  KC_ASTR,  KC_UNDS,  XXXXXXX,  _______,
     KC_GT,    KC_LT,    KC_DQUO,  KC_LPRN,  KC_RPRN,  KC_SCLN,   KC_COLN,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
-              KC_LGUI,  KC_QUOT,  KC_LBRC,  KC_RBRC,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
-              KC_VOLD,  KC_BSLS,  KC_SLSH,  KC_TILD,  XXXXXXX,   XXXXXXX,  XXXXXXX,  _______,  KC_LALT,  KC_VOLU,  DB_TOGG
+              KC_BSLS,  KC_QUOT,  KC_LBRC,  KC_RBRC,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
+              KC_VOLD,  _______,  KC_SLSH,  KC_TILD,  _______,   _______,  _______,  _______,  _______,  KC_VOLU,  DB_TOGG
   )
 };
 
@@ -169,36 +169,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         SEND_STRING(SS_TAP(X_ESC) ":w" SS_TAP(X_ENT));
         return false;
       }
+      break;
     case QUIT:
       if (record->event.pressed) {
         SEND_STRING(SS_TAP(X_ESC) ":q" SS_TAP(X_ENT));
         return false;
       }
-    case KC_BSPC:
-      {
-        // Keep track of whether the delete key status is registered.
-        static bool delkey_registered;
-        if (record->event.pressed) {
-          if (mod_state & MOD_MASK_SHIFT) {
-            // Make sure that Shift is not applied to the KC_DEL keycode.
-            del_mods(MOD_MASK_SHIFT);
-            register_code(KC_DEL);
-            // Update the boolean variable to reflect the status of KC_DEL
-            delkey_registered = true;
-            // Reapplying modifier state so that the held shift key(s)
-            // still work even after having tapped the Backspace/Delete key.
-            set_mods(mod_state);
-            return false;
-          }
-        } else { // on release of KC_BSPC
-          // In case KC_DEL is still being sent even after the release of KC_BSPC
-          if (delkey_registered) {
-            unregister_code(KC_DEL);
-            delkey_registered = false;
-            return false;
-          }
-        }
-      }
+      break;
   }
   return true;
 }
