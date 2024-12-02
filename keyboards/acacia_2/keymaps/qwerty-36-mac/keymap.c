@@ -53,8 +53,9 @@ enum layer_names {
 
 #define LBRC_ALT LALT_T(KC_LBRC)
 #define C_SYM LT(_SYMBOLS, KC_C)
-#define V_CTL LCTL_T(KC_V)
+#define V_NUM LT(_NUM_MAC, KC_V)
 #define RBRC_CTL LCTL_T(KC_RBRC)
+#define N_NUM LT(_NUM_MAC, KC_N)
 #define N_CTL RCTL_T(KC_N)
 #define M_SYM LT(_SYMBOLS, KC_M)
 #define SCLN_SYM LT(_SYMBOLS, KC_SCLN)
@@ -130,12 +131,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_SFT,     H_SFT,    J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_ENT,
-              KC_Z,     KC_X,     C_NUM,    V_SYM,                         N_SYM,    M_NUM,    KC_COMM,  KC_DOT,
+              KC_Z,     KC_X,     C_SYM,    V_NUM,                         N_NUM,    M_SYM,    KC_COMM,  KC_DOT,
               KC_MNXT,  XXXXXXX,  OSM_LSFT, ESC_NAV,                       BCK_NUM,  SPC_SYM,  XXXXXXX,  KC_MPLY
   ),
   [_NAV_MAC] = LAYOUT(
-              GUIY,     KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,
-    _______,  _______,  KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
+              _______,  KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,
+    _______,  GUIY,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
               KC_MPRV,  _______,  _______,  LCK_ALPM,                      _______,  _______,  _______,  _______
   ),
