@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_NAV_MAC] = LAYOUT_voyager(
     KC_MPRV,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  _______, 
-    _______,  _______,  KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,                         CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______, 
+    _______,  OSL_ALP,  KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,                         CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______, 
     _______,  GUIY,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,                         KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, M_SAVE,   _______, 
     _______,  GUIZ,     GUIX,     GUIC,     GUIV,     _______,                         _______,  AGRQUOT,  AGRO,     AGRA,     M_QUIT,   _______, 
                                                       _______,  LCK_ALP,     _______,  _______
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  XXXXXXX,  KC_QUOTE, KC_LCBR,  KC_RCBR,  KC_QUES,                         KC_MINUS, KC_AMPR,  KC_ASTR,  KC_UNDS,  XXXXXXX,  _______,
     KC_RABK,  KC_LABK,  KC_DQUO,  KC_LPRN,  KC_RPRN,  KC_SCLN,                         KC_COLN,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQUAL,
     _______,  KC_BSLS,  KC_GRAVE, KC_LBRC,  KC_RBRC,  _______,                         _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,  _______,
-                                                      KC_SLASH, KC_TILD,     _______,  _______
+                                                      KC_SLASH, KC_TILD,     KC_QUES,  KC_MINUS
   ),
 };
 
@@ -163,6 +163,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
-
-
-
