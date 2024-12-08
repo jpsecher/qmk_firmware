@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_QUES,                         KC_MINUS, KC_7,     KC_8,     KC_9,     QK_LLCK,  _______, 
     _______,  KC_F5,    F6_ALT,   F7_GUI,   F8_CTL,   KC_SCLN,                         KC_COLN,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQUAL,
     _______,  KC_F9,    KC_F10,   KC_F11,   KC_F12,   _______,                         _______,  KC_1,     KC_2,     KC_3,     KC_DOT,   _______,
-                                                      KC_0,     LCK_ALP,     _______,  KC_0
+                                                      KC_SLASH, LCK_ALP,     _______,  KC_0
   ),
   [_SYMBOLS] = LAYOUT_voyager(
     KC_VOLD,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  KC_VOLU,
