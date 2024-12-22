@@ -94,9 +94,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_SYMBOLS] = LAYOUT_voyager(
     KC_VOLD,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  KC_VOLU,
-    _______,  XXXXXXX,  KC_QUOTE, KC_LCBR,  KC_RCBR,  KC_QUES,                         KC_MINUS, KC_AMPR,  KC_ASTR,  KC_UNDS,  XXXXXXX,  _______,
+    _______,  XXXXXXX,  KC_GRAVE, KC_LCBR,  KC_RCBR,  KC_QUES,                         KC_MINUS, KC_AMPR,  KC_ASTR,  KC_UNDS,  XXXXXXX,  _______,
     KC_RABK,  KC_LABK,  KC_DQUO,  KC_LPRN,  KC_RPRN,  KC_SCLN,                         KC_COLN,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQUAL,
-    _______,  KC_BSLS,  KC_GRAVE, KC_LBRC,  KC_RBRC,  _______,                         _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,  _______,
+    _______,  KC_BSLS,  KC_QUOTE, KC_LBRC,  KC_RBRC,  _______,                         _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,  _______,
                                                       KC_SLASH, KC_TILD,     KC_QUES,  KC_MINUS
   ),
 };

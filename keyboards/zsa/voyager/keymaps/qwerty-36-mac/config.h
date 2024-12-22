@@ -1,8 +1,3 @@
-/*
-  Set any config.h overrides for your specific keymap here.
-  See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
-*/
-
 #undef TAPPING_TERM
 #define TAPPING_TERM 225
 
@@ -30,3 +25,20 @@
 
 #define RGB_MATRIX_STARTUP_SPD 60
 #define RGB_MATRIX_DEFAULT_SPD 20
+
+#undef MOUSEKEY_WHEEL_DELAY
+#define MOUSEKEY_WHEEL_DELAY 10
+#undef MOUSEKEY_WHEEL_INTERVAL
+#define MOUSEKEY_WHEEL_INTERVAL 80
+#undef MOUSEKEY_WHEEL_DELTA
+#define MOUSEKEY_WHEEL_DELTA 1
+#undef MOUSEKEY_WHEEL_MAX_SPEED
+#define MOUSEKEY_WHEEL_MAX_SPEED 8
+#undef MOUSEKEY_WHEEL_TIME_TO_MAX
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 40
+
+#define MK_KINETIC_SPEED
+// #define MOUSEKEY_WHEEL_INITIAL_MOVEMENTS 16
+// #define MOUSEKEY_WHEEL_BASE_MOVEMENTS 32
+// #define MOUSEKEY_WHEEL_ACCELERATED_MOVEMENTS 48
+// #define MOUSEKEY_WHEEL_DECELERATED_MOVEMENTS 8

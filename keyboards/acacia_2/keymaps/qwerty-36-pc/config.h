@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TOGGLE 2
 
 // Cancel one-shot after one second
-#define ONESHOT_TIMEOUT 1000
+#define ONESHOT_TIMEOUT 1500
 
 // Smart caps lock cancels after 10 seconds.
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
