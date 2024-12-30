@@ -55,6 +55,7 @@ enum layer_names {
 #define V_NUM LT(_NUM_MAC, KC_V)
 #define N_NUM LT(_NUM_MAC, KC_N)
 
+#define F5_AGR RALT_T(KC_F5)
 #define F6_ALT LALT_T(KC_F6)
 #define F7_GUI LGUI_T(KC_F7)
 #define F8_CTL LCTL_T(KC_F8)
@@ -73,8 +74,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_NAV_MAC] = LAYOUT_voyager(
     KC_MPRV,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  _______, 
-    _______,  OSL_ALP,  KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,                         CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______, 
-    _______,  GUIY,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,                         KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, M_SAVE,   _______, 
+    _______,  OSL_ALP,  KC_BTN3,  KC_WH_U,  KC_WH_D,  KC_BTN1,                         CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______, 
+    _______,  GUIY,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,                         KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, M_SAVE,   _______, 
     _______,  GUIZ,     GUIX,     GUIC,     GUIV,     _______,                         _______,  AGRQUOT,  AGRO,     AGRA,     M_QUIT,   _______, 
                                                       _______,  LCK_ALP,     _______,  _______
   ),
@@ -88,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_NUM_MAC] = LAYOUT_voyager(
     RGB_TOG,  _______,  _______,  _______,  _______,  RM_SPDD,                         RM_SPDU,  _______,  _______,  _______,  _______,  KC_PWR,
     _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_QUES,                         KC_MINUS, KC_7,     KC_8,     KC_9,     QK_LLCK,  _______, 
-    _______,  KC_F5,    F6_ALT,   F7_GUI,   F8_CTL,   KC_SCLN,                         KC_COLN,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQUAL,
+    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_SCLN,                         KC_COLN,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQUAL,
     _______,  KC_F9,    KC_F10,   KC_F11,   KC_F12,   _______,                         _______,  KC_1,     KC_2,     KC_3,     KC_DOT,   _______,
                                                       KC_SLASH, LCK_ALP,     _______,  KC_0
   ),
