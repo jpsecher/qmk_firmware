@@ -31,6 +31,7 @@ enum layer_names {
 #define GUIX LGUI(KC_X)
 #define GUIC LGUI(KC_C)
 #define GUIV LGUI(KC_V)
+#define GUIA LGUI(KC_A)
 
 #define BCK_NUM LT(_NUM_MAC, KC_BSPC)
 #define LCK_NAV TO(_NAV_MAC)
@@ -74,8 +75,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_NAV_MAC] = LAYOUT_voyager(
     KC_MPRV,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  _______, 
-    _______,  OSL_ALP,  KC_BTN3,  KC_WH_U,  KC_WH_D,  KC_BTN1,                         CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______, 
-    _______,  GUIY,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,                         KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, M_SAVE,   _______, 
+    _______,  OSL_ALP,  GUIY,     KC_WH_U,  KC_WH_D,  KC_BTN1,                         CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______, 
+    _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,                         KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, M_SAVE,   _______, 
     _______,  GUIZ,     GUIX,     GUIC,     GUIV,     _______,                         _______,  AGRQUOT,  AGRO,     AGRA,     M_QUIT,   _______, 
                                                       _______,  LCK_ALP,     _______,  _______
   ),

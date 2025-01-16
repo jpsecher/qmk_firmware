@@ -123,9 +123,9 @@ enum layer_names {
 
 enum {
   // Save buffer in editor
-  SAVE = SAFE_RANGE,
+  M_SAVE = SAFE_RANGE,
   // Quit editor
-  QUIT
+  M_QUIT
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -133,12 +133,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     XXXXXXX,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_SFT,     H_SFT,    J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_ENT,
               KC_Z,     KC_X,     C_SYM,    V_NUM,                         N_NUM,    M_SYM,    KC_COMM,  KC_DOT,
-              KC_MNXT,  XXXXXXX,  OSM_LSFT, ESC_NAV,  XXXXXXX,   XXXXXXX,  BCK_NUM,  SPC_SYM,  XXXXXXX,  KC_MPLY,  DB_TOGG
+              KC_MNXT,  XXXXXXX,  OSM_LSFT, ESC_NAV,  XXXXXXX,   XXXXXXX,  KC_BSPC,  SPC_SYM,  XXXXXXX,  KC_MPLY,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
-    _______,  _______,  KC_BTN3,  KC_BTN2,  KC_BTN1,  KC_WH_D,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
-    _______,  GUIY,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_WH_U,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
-              GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
+    _______,  _______,  GUIY,     KC_WH_U,  KC_WH_D,  KC_BTN1,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
+    _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  M_SAVE,   _______,
+              GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     M_QUIT,
               KC_MPRV,  _______,  _______,  LCK_ALPM, _______,   _______,  _______,  _______,  _______,  _______,  DB_TOGG
   ),
   [_ALP_OVL] = LAYOUT(
@@ -148,16 +148,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               _______,  _______,  _______,  LCK_ALPM, _______,   _______,  KC_BSPC,  KC_SPC,   _______,  _______,  DB_TOGG
   ),
   [_NUM_MAC] = LAYOUT(
-    _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_QUES,   KC_MINS,  KC_7,     KC_8,     KC_9,     QK_LLCK,  _______,
-    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_SCLN,   KC_COLN,  FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
+    _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    M_QUIT,    KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,  _______,
+    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   M_SAVE,    KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
               KC_F9,    KC_F10,   KC_F11,   KC_F12,                        KC_1,     KC_2,     KC_3,     KC_DOT,
-              QK_BOOT,  _______,  KC_0,     LCK_ALPM, _______,   _______,  _______,  KC_0,     _______,  KC_PWR,   DB_TOGG
+              QK_BOOT,  _______,  KC_SLASH, LCK_ALPM, _______,   _______,  _______,  KC_MINUS, _______,  KC_PWR,   DB_TOGG
   ),
   [_SYMBOLS] = LAYOUT(
-    _______,  XXXXXXX,  KC_GRV,   KC_LCBR,  KC_RCBR,  KC_QUES,   KC_MINS,  KC_AMPR,  KC_ASTR,  KC_UNDS,  XXXXXXX,  _______,
-    KC_GT,    KC_LT,    KC_DQUO,  KC_LPRN,  KC_RPRN,  KC_SCLN,   KC_COLN,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
-              KC_BSLS,  KC_QUOT,  KC_LBRC,  KC_RBRC,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
-              KC_VOLD,  _______,  KC_SLSH,  KC_TILD,  _______,   _______,  _______,  _______,  _______,  KC_VOLU,  DB_TOGG
+    _______,  XXXXXXX,  KC_GRV,   KC_LCBR,  KC_RCBR,  XXXXXXX,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_UNDS,  XXXXXXX,  _______,
+    KC_QUES,  KC_SCLN,  KC_DQUO,  KC_LBRC,  KC_RBRC,  XXXXXXX,   KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
+              KC_BSLS,  KC_QUOT,  KC_LPRN,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
+              KC_VOLD,  _______,  KC_SLSH,  KC_TILD,  _______,   _______,  KC_UNDS,  KC_MINUS, _______,  KC_VOLU,  DB_TOGG
   )
 };
 
@@ -166,13 +166,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   static uint8_t mod_state;
   mod_state = get_mods();
   switch (keycode) {
-    case SAVE:
+    case M_SAVE:
       if (record->event.pressed) {
         SEND_STRING(SS_TAP(X_ESC) ":w" SS_TAP(X_ENT));
         return false;
       }
       break;
-    case QUIT:
+    case M_QUIT:
       if (record->event.pressed) {
         SEND_STRING(SS_TAP(X_ESC) ":q" SS_TAP(X_ENT));
         return false;
