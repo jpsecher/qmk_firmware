@@ -118,7 +118,8 @@ enum layer_names {
 #define D_GUI LGUI_T(KC_D)
 #define S_ALT LALT_T(KC_S)
 #define A_AGR RALT_T(KC_A)
-
+#define OSM_HYPR OSM(MOD_HYPR)
+#define OSM_MEH OSM(MOD_MEH)
 
 enum {
   // Save buffer in editor
@@ -144,19 +145,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
     _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
               KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
-              _______,  _______,  _______,  LCK_ALPM,                      KC_BSPC,  KC_SPC,   _______,  _______
+              _______,  _______,  _______,  LCK_ALPM,                      _______,  KC_SPC,   _______,  _______
   ),
   [_NUM_MAC] = LAYOUT(
-              KC_F1,    KC_F2,    KC_F3,    KC_F4,    XXXXXXX,   KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,
-    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   XXXXXXX,   KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
+              KC_F1,    KC_F2,    KC_F3,    KC_F4,    OSM_HYPR,  KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,
+    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   OSM_MEH,   KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
               KC_F9,    KC_F10,   KC_F11,   KC_F12,                        KC_1,     KC_2,     KC_3,     KC_DOT,
               QK_BOOT,  _______,  KC_SLSH,  LCK_ALPM,                      _______,  KC_MINS,  _______,  KC_PWR
   ),
   [_SYMBOLS] = LAYOUT(
-              XXXXXXX,  KC_GRV,   KC_LCBR,  KC_RCBR,  XXXXXXX,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_UNDS,  XXXXXXX,
-    KC_QUES,  KC_SCLN,  KC_DQUO,  KC_LBRC,  KC_RBRC,  XXXXXXX,   KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
-              KC_BSLS,  KC_QUOT,  KC_LPRN,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
-              KC_VOLD,  _______,  KC_SLSH,  KC_TILD,                       KC_UNDS,  KC_MINS,  _______,  KC_VOLU
+              XXXXXXX,  KC_LCBR,  KC_GRV,   KC_RCBR,  QK_AREP,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_MINS,  KC_UNDS,
+    KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  QK_REP,    KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
+              KC_BSLS,  KC_LPRN,  KC_QUOT,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
+              KC_VOLD,  _______,  KC_SLSH,  KC_TILD,                       KC_UNDS,  _______,  _______,  KC_VOLU
   )
 };
 

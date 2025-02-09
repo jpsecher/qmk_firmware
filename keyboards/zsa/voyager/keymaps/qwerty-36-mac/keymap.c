@@ -41,6 +41,8 @@ enum layer_names {
 #define LCK_ALP TO(_QWE_MAC)
 #define OSL_ALP OSL(_ALP_OVL)
 #define OSL_NUM OSL(_NUM_MAC)
+#define OSM_HYPR OSM(MOD_HYPR)
+#define OSM_MEH OSM(MOD_MEH)
 
 #define P_AGR RALT_T(KC_P)
 #define L_ALT LALT_T(KC_L)
@@ -89,8 +91,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_NUM_MAC] = LAYOUT_voyager(
     RGB_TOG,  _______,  _______,  _______,  _______,  RM_SPDD,                         RM_SPDU,  _______,  _______,  _______,  _______,  KC_PWR,
-    _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F13,                          KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,  _______,
-    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_F14,                          KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQUAL,
+    _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    OSM_HYPR,                        KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,  _______,
+    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   OSM_MEH,                         KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQUAL,
     _______,  KC_F9,    KC_F10,   KC_F11,   KC_F12,   _______,                         _______,  KC_1,     KC_2,     KC_3,     KC_DOT,   _______,
                                                       KC_SLASH, LCK_ALP,     _______,  KC_MINUS
   ),
