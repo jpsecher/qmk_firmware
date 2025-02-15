@@ -42,8 +42,8 @@ enum layer_names {
 #define X_ALT LALT_T(KC_X)
 
 #define D_NUM LT(_NUM_MAC, KC_D)
-#define N_NUM LT(_NUM_MAC, KC_N)
-#define COMM_SYM LT(_SYMBOLS, KC_COMM)
+#define R_NUM LT(_NUM_MAC, KC_R)
+#define DOT_SYM LT(_SYMBOLS, KC_DOT)
 #define F_SYM LT(_SYMBOLS, KC_F)
 #define GUIZ LGUI(KC_Z)
 #define GUIX LGUI(KC_X)
@@ -85,9 +85,9 @@ enum {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
-    XXXXXXX,  KC_B,     KC_Y,     KC_O,     KC_U,     KC_Q,      KC_Z,     KC_P,     KC_R,     KC_S,     KC_W,     XXXXXXX,
+    XXXXXXX,  KC_B,     KC_Y,     KC_O,     KC_U,     KC_Z,      KC_Q,     KC_N,     KC_S,     KC_W,     KC_V,     XXXXXXX,
     KC_TAB,   C_AGR,    I_ALT,    E_GUI,    A_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    T_AGR,    KC_ENT,
-              KC_X,     KC_DOT,   COMM_SYM, D_NUM,                         N_NUM,    F_SYM,    KC_M,     KC_V,
+              KC_X,     KC_COMM,  DOT_SYM,  D_NUM,                         R_NUM,    F_SYM,    KC_M,     KC_P,
               KC_MNXT,  XXXXXXX,  OSM_LSFT, ESC_NAV,  XXXXXXX,   XXXXXXX,  KC_BSPC,  SPC_SYM,  XXXXXXX,  KC_MPLY,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
