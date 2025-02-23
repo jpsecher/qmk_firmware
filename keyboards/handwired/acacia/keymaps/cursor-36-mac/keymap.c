@@ -41,7 +41,7 @@ enum layer_names {
 #define B_GUI RGUI_T(KC_B)
 #define X_ALT LALT_T(KC_X)
 
-#define D_NUM LT(_NUM_MAC, KC_D)
+#define G_NUM LT(_NUM_MAC, KC_G)
 #define R_NUM LT(_NUM_MAC, KC_R)
 #define DOT_SYM LT(_SYMBOLS, KC_DOT)
 #define F_SYM LT(_SYMBOLS, KC_F)
@@ -65,10 +65,10 @@ enum layer_names {
 #define L_ALT LALT_T(KC_L)
 #define J_CTL RCTL_T(KC_J)
 #define K_GUI RGUI_T(KC_K)
-#define A_CTL LCTL_T(KC_A)
-#define E_GUI LGUI_T(KC_E)
+#define E_CTL LCTL_T(KC_E)
+#define A_GUI LGUI_T(KC_A)
 #define I_ALT LALT_T(KC_I)
-#define C_AGR RALT_T(KC_C)
+#define D_AGR RALT_T(KC_D)
 #define F5_AGR RALT_T(KC_F5)
 #define F6_ALT LALT_T(KC_F6)
 #define F7_GUI LGUI_T(KC_F7)
@@ -86,8 +86,8 @@ enum {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
     XXXXXXX,  KC_B,     KC_Y,     KC_O,     KC_U,     KC_Z,      KC_Q,     KC_N,     KC_S,     KC_W,     KC_V,     XXXXXXX,
-    KC_TAB,   C_AGR,    I_ALT,    E_GUI,    A_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    T_AGR,    KC_ENT,
-              KC_X,     KC_COMM,  DOT_SYM,  D_NUM,                         R_NUM,    F_SYM,    KC_M,     KC_P,
+    KC_TAB,   D_AGR,    I_ALT,    A_GUI,    E_CTL,    KC_X,      KC_H,     J_CTL,    K_GUI,    L_ALT,    T_AGR,    KC_ENT,
+              KC_C,     KC_COMM,  DOT_SYM,  G_NUM,                         R_NUM,    F_SYM,    KC_M,     KC_P,
               KC_MNXT,  XXXXXXX,  OSM_LSFT, ESC_NAV,  XXXXXXX,   XXXXXXX,  KC_BSPC,  SPC_SYM,  XXXXXXX,  KC_MPLY,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
