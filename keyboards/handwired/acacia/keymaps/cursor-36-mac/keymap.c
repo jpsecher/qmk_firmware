@@ -109,8 +109,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               QK_BOOT,  _______,  KC_SLASH, LCK_ALPM, _______,   _______,  _______,  KC_MINUS, _______,  KC_PWR,   DB_TOGG
   ),
   [_SYMBOLS] = LAYOUT(
-    _______,  XXXXXXX,  KC_LCBR,  KC_GRV,   KC_RCBR,  QK_AREP,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_MINS,  KC_UNDS,  _______,  
-    KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  QK_REP,    KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
+    _______,  XXXXXXX,  KC_LCBR,  KC_GRV,   KC_RCBR,  QK_AREP,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_PLUS,  KC_UNDS,  _______,  
+    KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  QK_REP,    KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_MINS,  KC_EQL,
               KC_BSLS,  KC_LPRN,  KC_QUOT,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
               KC_VOLD,  _______,  KC_SLSH,  KC_TILD,  _______,   _______,  KC_UNDS,  _______,  _______,  KC_VOLU,  DB_TOGG
   )
