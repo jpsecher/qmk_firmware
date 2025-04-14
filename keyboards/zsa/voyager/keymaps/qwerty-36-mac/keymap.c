@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                            KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     XXXXXXX,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,                            KC_H,     J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_ENT,
     XXXXXXX,  KC_Z,     KC_X,     C_SYM,    V_NUM,    XXXXXXX,                         XXXXXXX,  N_NUM,    M_SYM,    KC_COMMA, KC_DOT,   XXXXXXX,
-                                                      OSM_LSFT, ESC_NAV,     KC_BSPC,  SPC_SYM
+                                                      OSM_LSFT, ESC_NAV,     BCK_NUM,  SPC_SYM
   ),
   [_NAV_MAC] = LAYOUT_voyager(
     KC_MPRV,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  _______,
@@ -91,10 +91,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_SYMBOLS] = LAYOUT_voyager(
     KC_VOLD,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  KC_VOLU,
-    _______,  XXXXXXX,  KC_LPRN,  KC_QUOTE, KC_RPRN,  QK_AREP,                         KC_COLN , KC_AMPR,  KC_ASTR,  KC_PLUS,  KC_UNDS,  _______,
-    KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  QK_REP,                          KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_MINUS, KC_EQUAL,
+    _______,  KC_UNDS,  KC_LPRN,  KC_QUOTE, KC_RPRN,  QK_AREP,                         KC_COLN , KC_AMPR,  KC_ASTR,  KC_MINS,  KC_UNDS,  _______,
+    KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  QK_REP,                          KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQUAL,
     _______,  KC_BSLS,  KC_LCBR,  KC_GRAVE, KC_RCBR,  _______,                         _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,  _______,
-                                                      KC_SLASH, KC_TILD,     KC_UNDS,  _______
+                                                      KC_SLASH, KC_TILD,     _______,  _______
   ),
   [_ALP_OVL] = LAYOUT_voyager(
     _______,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  _______,
