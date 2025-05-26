@@ -141,12 +141,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
               KC_MPRV,  _______,  _______,  LCK_ALPM,                      _______,  _______,  _______,  _______
   ),
-  [_ALP_OVL] = LAYOUT(
-              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
-    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
-              KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
-              _______,  _______,  _______,  LCK_ALPM,                      _______,  KC_SPC,   _______,  _______
-  ),
   [_NUM_MAC] = LAYOUT(
               KC_F1,    KC_F2,    KC_F3,    KC_F4,    OSM_HYPR,  KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,
     _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   OSM_MEH,   KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
@@ -154,10 +148,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               QK_BOOT,  _______,  KC_SLSH,  LCK_ALPM,                      _______,  KC_MINS,  _______,  KC_PWR
   ),
   [_SYMBOLS] = LAYOUT(
-              XXXXXXX,  KC_LPRN,  KC_QUOT,  KC_RPRN,  QK_AREP,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_PLUS,  KC_UNDS,
-    KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  QK_REP,    KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_MINS,  KC_EQL,
+              QK_AREP,  KC_LPRN,  KC_QUOT,  KC_RPRN,  KC_UNDS,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_MINS,  QK_REP,
+    KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,   KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQL,
               KC_BSLS,  KC_LCBR,  KC_GRV,   KC_RCBR,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
-              KC_VOLD,  _______,  KC_SLSH,  KC_TILD,                       KC_UNDS,  _______,  _______,  KC_VOLU
+              KC_VOLD,  _______,  KC_SLSH,  KC_TILD,                       _______,  _______,  _______,  KC_VOLU
+  ),
+  [_ALP_OVL] = LAYOUT(
+              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
+    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
+              KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
+              _______,  _______,  _______,  LCK_ALPM,                      _______,  KC_SPC,   _______,  _______
   )
 };
 
