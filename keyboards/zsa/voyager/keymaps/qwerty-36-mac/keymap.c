@@ -38,6 +38,7 @@ enum layer_names {
 
 // Layers
 #define LCK_NAV TO(_NAV_MAC)
+#define MO_NAV MO(_NAV_MAC)
 #define SPC_NUM LT(_NUM_MAC, KC_SPC)
 #define LCK_ALP TO(_QWE_MAC)
 #define OSL_ALP OSL(_ALP_OVL)
@@ -86,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  QK_AREP,  KC_LPRN,  KC_GRAVE, KC_RPRN,  KC_UNDS,                         KC_COLN,  KC_AMPR,  KC_ASTR,  KC_TILD,  QK_REP,   _______,
     KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,                         KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  KC_EQUAL,
     _______,  KC_BSLS,  KC_LCBR,  KC_QUOTE, KC_RCBR,  _______,                         _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,  _______,
-                                                      KC_SLASH, OSL_NAV,     KC_BSPC,  KC_UNDS
+                                                      KC_SLASH, MO_NAV,      KC_BSPC,  KC_UNDS
   ),
   [_NUM_MAC] = LAYOUT_voyager(
     RGB_TOG,  _______,  _______,  _______,  _______,  RM_SPDD,                         RM_SPDU,  _______,  _______,  _______,  _______,  KC_PWR,
