@@ -1,9 +1,9 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 225
 
-// Cancel one-shot after one and a half second
+// Cancel one-shot after one second
 #undef ONESHOT_TIMEOUT
-#define ONESHOT_TIMEOUT 1500
+#define ONESHOT_TIMEOUT 1000
 
 #define PERMISSIVE_HOLD
 
