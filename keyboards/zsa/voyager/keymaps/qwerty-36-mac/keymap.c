@@ -75,21 +75,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                            KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     XXXXXXX,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,                            KC_H,     J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_BSPC,
     XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_V,     XXXXXXX,                         XXXXXXX,  KC_N,     KC_M,     KC_COMM,  KC_DOT,   XXXXXXX,
-                                                      OSM_LSFT, ESC_NAV,      OSL_SYM, SPC_NUM
+                                                      OSM_LSFT, ESC_NAV,     OSL_SYM,  SPC_NUM
   ),
   [_NAV_MAC] = LAYOUT_voyager(
     KC_MPRV,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  _______,
     _______,  GUIY,     OSL_ALP,  KC_WH_D,  KC_WH_U,  KC_BTN1,                         CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
-    _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,                         KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, M_SAVE,   KC_ENT,
+    _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,                         KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, M_SAVE,   _______,
     _______,  GUIZ,     GUIX,     GUIC,     GUIV,     _______,                         _______,  AGRQUOT,  AGRO,     AGRA,     M_QUIT,   _______,
-                                                      _______,  LCK_ALP,     _______,  _______
+                                                      _______,  LCK_ALP,     KC_ENT,   _______
   ),
   [_SYMBOLS] = LAYOUT_voyager(
     KC_VOLD,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  KC_VOLU,
     _______,  KC_QUES,  KC_LPRN,  KC_GRAVE, KC_RPRN,  KC_UNDS,                         KC_COLN,  KC_AMPR,  KC_ASTR,  KC_QUES,  KC_EQUAL, _______,
     _______,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,                         KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  _______,
     _______,  KC_BSLS,  KC_LCBR,  KC_QUOTE, KC_RCBR,  _______,                         _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,  _______,
-                                                      KC_SLASH, KC_TILD,     _______,  KC_UNDS
+                                                      KC_SLASH, KC_TILD,     KC_ENT,   KC_UNDS
   ),
   [_NUM_MAC] = LAYOUT_voyager(
     RGB_TOG,  _______,  _______,  _______,  _______,  RM_SPDD,                         RM_SPDU,  _______,  _______,  _______,  _______,  KC_PWR,
