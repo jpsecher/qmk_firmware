@@ -86,10 +86,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_SYMBOLS] = LAYOUT_voyager(
     KC_VOLD,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  KC_VOLU,
-    _______,  OSM_HYPR, KC_LCBR,  KC_GRAVE, KC_RCBR,  KC_EQUAL,                        KC_COLN,  KC_AMPR,  KC_ASTR,  KC_UNDS,  OSM_MEH,  _______,
+    _______,  OSM_HYPR, KC_LCBR,  KC_GRAVE, KC_RCBR,  KC_EQUAL,                        KC_COLN,  KC_AMPR,  KC_ASTR,  KC_QUES,  OSM_MEH,  _______,
     KC_TILD,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,                         KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  _______,
     _______,  KC_BSLS,  KC_LPRN,  KC_QUOTE, KC_RPRN,  _______,                         _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,  _______,
-                                                      KC_QUES,  KC_SLASH,    KC_ENT,   KC_UNDS
+                                                      _______,  KC_SLASH,    KC_ENT,   KC_UNDS
   ),
   [_NUM_MAC] = LAYOUT_voyager(
     RGB_TOG,  _______,  _______,  _______,  _______,  RM_SPDD,                         RM_SPDU,  _______,  _______,  _______,  _______,  KC_PWR,
