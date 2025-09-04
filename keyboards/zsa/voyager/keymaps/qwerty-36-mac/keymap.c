@@ -42,6 +42,8 @@ enum layer_names {
 #define TO_NAV TO(_NAV_MAC)
 #define ESC_NAV LT(_NAV_MAC, KC_ESC)
 #define SPC_NUM LT(_NUM_MAC, KC_SPC)
+#define G_NUM LT(_NUM_MAC, KC_G)
+#define H_NUM LT(_NUM_MAC, KC_H)
 #define LCK_ALP TO(_QWE_MAC)
 #define OSL_ALP OSL(_ALP_OVL)
 #define OSL_NAV OSL(_NAV_MAC)
@@ -73,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWE_MAC] = LAYOUT_voyager(
     KC_MNXT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  RM_VALD,                         RM_VALU,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPLY,
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                            KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     XXXXXXX,
-    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,                            KC_H,     J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_BSPC,
+    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_NUM,                           H_NUM,    J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_BSPC,
     XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_V,     XXXXXXX,                         XXXXXXX,  KC_N,     KC_M,     KC_COMM,  KC_DOT,   XXXXXXX,
                                                       ESC_NAV,  OSM_LSFT,    OSL_SYM,  SPC_NUM
   ),
@@ -89,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  OSM_HYPR, KC_LCBR,  KC_GRAVE, KC_RCBR,  KC_EQUAL,                        KC_COLN,  KC_AMPR,  KC_ASTR,  KC_QUES,  OSM_MEH,  _______,
     KC_TILD,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,                         KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  _______,
     _______,  KC_BSLS,  KC_LPRN,  KC_QUOTE, KC_RPRN,  _______,                         _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,  _______,
-                                                      _______,  KC_SLASH,    KC_ENT,   KC_UNDS
+                                                      KC_UNDS,  KC_SLASH,    KC_ENT,   KC_UNDS
   ),
   [_NUM_MAC] = LAYOUT_voyager(
     RGB_TOG,  _______,  _______,  _______,  _______,  RM_SPDD,                         RM_SPDU,  _______,  _______,  _______,  _______,  KC_PWR,

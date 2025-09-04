@@ -45,6 +45,8 @@ enum layer_names {
 #define X_ALT LALT_T(KC_X)
 
 #define SPC_NUM LT(_NUM_MAC, KC_SPC)
+#define G_NUM LT(_NUM_MAC, KC_G)
+#define H_NUM LT(_NUM_MAC, KC_H)
 #define OSL_NAV OSL(_NAV_MAC)
 #define OSL_SYM OSL(_SYMBOLS)
 
@@ -137,7 +139,7 @@ enum {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
-    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_SFT,     H_SFT,    J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_BSPC,
+    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_NUM,     H_NUM,    J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_BSPC,
               KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
               KC_MNXT,  XXXXXXX,  ESC_NAV, OSM_LSFT,                       OSL_SYM,  SPC_NUM,  XXXXXXX,  KC_MPLY
   ),
@@ -154,10 +156,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               QK_BOOT,  _______,  LCK_ALPM, KC_SLSH,                       KC_COMM,  KC_SPC,   _______,  KC_PWR
   ),
   [_SYMBOLS] = LAYOUT(
-              OSM_HYPR, KC_LCBR,  KC_GRV,   KC_RCBR,  KC_EQL,   KC_COLN,   KC_AMPR,  KC_ASTR,  KC_UNDS,  OSM_MEH,
+              OSM_HYPR, KC_LCBR,  KC_GRV,   KC_RCBR,  KC_EQL,   KC_COLN,   KC_AMPR,  KC_ASTR,  KC_QUES,  OSM_MEH,
     KC_TILD,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,  KC_0,      KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  _______,
               KC_BSLS,  KC_LPRN,  KC_QUOT,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
-              KC_VOLD,  _______,  KC_QUES,  KC_SLSH,                       KC_ENT,   KC_UNDS,  _______,  KC_VOLU
+              KC_VOLD,  _______,  KC_UNDS,  KC_SLSH,                       KC_ENT,   KC_UNDS,  _______,  KC_VOLU
   ),
   [_ALP_OVL] = LAYOUT(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
