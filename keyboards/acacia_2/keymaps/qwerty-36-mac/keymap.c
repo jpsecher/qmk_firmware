@@ -140,7 +140,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_NUM,     H_NUM,    J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_BSPC,
-              KC_Z,     KC_X,     KC_C,     V_NUM,                         N_NUM,    KC_M,     KC_COMM,  KC_DOT,
+              KC_Z,     KC_X,     C_NUM,    V_NUM,                         N_NUM,    M_NUM,    KC_COMM,  KC_DOT,
               KC_MNXT,  XXXXXXX,  ESC_NAV,  OSM_LSFT,                      OSL_SYM,  KC_SPC,   XXXXXXX,  KC_MPLY
   ),
   [_NAV_MAC] = LAYOUT(
