@@ -119,6 +119,7 @@ enum layer_names {
 #define SPC_SYM LT(_SYMBOLS, KC_SPC)
 #define B_FUNM LT(_NUM_MAC, KC_B)
 #define P_AGR RALT_T(KC_P)
+#define B_AGR RALT_T(KC_B)
 #define L_ALT LALT_T(KC_L)
 #define J_CTL RCTL_T(KC_J)
 #define K_GUI RGUI_T(KC_K)
@@ -138,9 +139,9 @@ enum {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
-              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
-    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_NUM,     H_NUM,    J_CTL,    K_GUI,    L_ALT,    P_AGR,    KC_BSPC,
-              KC_Z,     KC_X,     C_NUM,    V_NUM,                         N_NUM,    M_NUM,    KC_COMM,  KC_DOT,
+              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
+    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_NUM,     H_NUM,    J_CTL,    K_GUI,    L_ALT,    B_AGR,    KC_BSPC,
+              KC_Z,     KC_X,     KC_C,     V_NUM,                         N_NUM,    KC_M,     KC_COMM,  KC_DOT,
               KC_MNXT,  XXXXXXX,  ESC_NAV,  OSM_LSFT,                      OSL_SYM,  KC_SPC,   XXXXXXX,  KC_MPLY
   ),
   [_NAV_MAC] = LAYOUT(
@@ -156,14 +157,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               QK_BOOT,  _______,  LCK_ALPM, KC_SLSH,                       KC_COMM,  _______,  _______,  KC_PWR
   ),
   [_SYMBOLS] = LAYOUT(
-              OSM_HYPR, KC_LCBR,  KC_GRV,   KC_RCBR,  KC_EQL,   KC_COLN,   KC_AMPR,  KC_ASTR,  KC_QUES,  OSM_MEH,
+              OSM_HYPR, KC_LCBR,  KC_GRV,   KC_RCBR,  KC_EQL,   KC_COLN,   KC_AMPR,  KC_ASTR,  KC_QUES,  KC_MINS,
     KC_TILD,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,  KC_0,      KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  _______,
               KC_BSLS,  KC_LPRN,  KC_QUOT,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
-              KC_VOLD,  _______,  KC_UNDS,  KC_SLSH,                       KC_ESC,   _______,  _______,  KC_VOLU
+              KC_VOLD,  _______,  KC_UNDS,  KC_SLSH,                       KC_ENT,   _______,  _______,  KC_VOLU
   ),
   [_ALP_OVL] = LAYOUT(
-              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,
-    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
+              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
+    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     _______,
               KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
               _______,  _______,  LCK_ALPM, _______,                       KC_ENT,   _______,  _______,  _______
   )

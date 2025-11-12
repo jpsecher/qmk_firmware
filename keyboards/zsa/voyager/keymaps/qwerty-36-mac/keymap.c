@@ -57,6 +57,7 @@ enum layer_names {
 
 // Homerow mods
 #define P_AGR RALT_T(KC_P)
+#define B_AGR RALT_T(KC_B)
 #define L_ALT LALT_T(KC_L)
 #define J_CTL RCTL_T(KC_J)
 #define K_GUI RGUI_T(KC_K)
@@ -76,8 +77,8 @@ enum layer_names {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWE_MAC] = LAYOUT_voyager(
     KC_MNXT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  RM_VALD,                         RM_VALU,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPLY,
-    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                            KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     XXXXXXX,
-    KC_TAB,   KC_A,     S_ALT,    D_GUI,    F_CTL,    KC_G,                            KC_H,     J_CTL,    K_GUI,    L_ALT,    KC_P,     KC_BSPC,
+    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                            KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
+    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,                            KC_H,     J_CTL,    K_GUI,    L_ALT,    B_AGR,    KC_BSPC,
     XXXXXXX,  KC_Z,     KC_X,     KC_C,     V_NUM,    XXXXXXX,                         XXXXXXX,  N_NUM,    KC_M,     KC_COMM,  KC_DOT,   XXXXXXX,
                                                       ESC_NAV,  OSM_LSFT,    OSL_SYM,  KC_SPC
   ),
@@ -104,8 +105,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_ALP_OVL] = LAYOUT_voyager(
     _______,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                            KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     _______,
-    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                            KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
+    _______,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                            KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     _______,
+    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                            KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     _______,
     _______,  KC_Z,     KC_X,     KC_C,     KC_V,     _______,                         _______,  KC_N,     KC_M,     KC_COMM,  KC_DOT,   _______,
                                                       LCK_ALP,  _______,     KC_ENT,   _______
   ),
