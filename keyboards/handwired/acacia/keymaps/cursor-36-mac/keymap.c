@@ -75,6 +75,8 @@ enum layer_names {
 #define F8_CTL LCTL_T(KC_F8)
 #define OSM_HYPR OSM(MOD_HYPR)
 #define OSM_MEH OSM(MOD_MEH)
+#define OSL_ALP OSL(_ALP_OVL)
+#define OSL_SYM OSL(_SYMBOLS)
 
 enum {
   // Save buffer in editor
@@ -86,33 +88,33 @@ enum {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
     XXXXXXX,  KC_B,     KC_Y,     KC_O,     KC_U,     KC_Z,      KC_Q,     KC_N,     KC_S,     KC_W,     KC_V,     XXXXXXX,
-    KC_TAB,   D_AGR,    I_ALT,    A_GUI,    E_CTL,    KC_X,      KC_H,     J_CTL,    K_GUI,    L_ALT,    T_AGR,    KC_ENT,
-              KC_C,     KC_COMM,  DOT_SYM,  G_NUM,                         R_NUM,    F_SYM,    KC_M,     KC_P,
-              KC_MNXT,  XXXXXXX,  OSM_LSFT, ESC_NAV,  XXXXXXX,   XXXXXXX,  KC_BSPC,  SPC_SYM,  XXXXXXX,  KC_MPLY,  DB_TOGG
+    KC_TAB,   D_AGR,    I_ALT,    A_GUI,    E_CTL,    KC_X,      KC_H,     J_CTL,    K_GUI,    L_ALT,    T_AGR,    KC_BSPC,
+              KC_C,     KC_COMM,  KC_DOT,   G_NUM,                         R_NUM,    KC_F,     KC_M,     KC_P,
+              KC_MNXT,  XXXXXXX,  ESC_NAV,  OSM_LSFT, XXXXXXX,   XXXXXXX,  OSL_SYM,  KC_SPC,   XXXXXXX,  KC_MPLY,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
-    _______,  _______,  GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN1,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
+    _______,  OSL_ALP,  GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN1,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
     _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  M_SAVE,   _______,
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     M_QUIT,
-              KC_MPRV,  _______,  _______,  LCK_ALPM, _______,   _______,  _______,  _______,  _______,  _______,  DB_TOGG
+              KC_MPRV,  _______,  LCK_ALPM, _______,  _______,   _______,  KC_ENT,   _______,  _______,  KC_MNXT,  DB_TOGG
   ),
   [_ALP_OVL] = LAYOUT(
-    _______,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_B,     _______,
-    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_P,     _______,
+    _______,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     _______,
+    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_B,     _______,
               KC_Z,     KC_X,     KC_C,     KC_V,                          KC_N,     KC_M,     KC_COMM,  KC_DOT,
-              _______,  _______,  _______,  LCK_ALPM, _______,   _______,  KC_BSPC,  KC_SPC,   _______,  _______,  DB_TOGG
+              _______,  _______,  LCK_ALPM, _______,  _______,   _______,  _______,  _______,  _______,  _______,  DB_TOGG
   ),
   [_NUM_MAC] = LAYOUT(
-    _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    OSM_HYPR,  KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,  _______,
-    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   OSM_MEH,   KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  KC_EQL,
+    _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_EQL,    KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,  _______,
+    _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_MINS,   KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  _______,
               KC_F9,    KC_F10,   KC_F11,   KC_F12,                        KC_1,     KC_2,     KC_3,     KC_DOT,
-              QK_BOOT,  _______,  KC_SLASH, LCK_ALPM, _______,   _______,  _______,  KC_MINUS, _______,  KC_PWR,   DB_TOGG
+              QK_BOOT,  _______,  LCK_ALPM, KC_SLSH,  _______,   _______,  KC_COMM,  _______,  _______,  KC_PWR,   DB_TOGG
   ),
   [_SYMBOLS] = LAYOUT(
-    _______,  XXXXXXX,  KC_LCBR,  KC_GRV,   KC_RCBR,  QK_AREP,   KC_COLN,  KC_AMPR,  KC_ASTR,  KC_PLUS,  KC_UNDS,  _______,  
-    KC_QUES,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  QK_REP,    KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_MINS,  KC_EQL,
-              KC_BSLS,  KC_LPRN,  KC_QUOT,  KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
-              KC_VOLD,  _______,  KC_SLSH,  KC_TILD,  _______,   _______,  KC_UNDS,  _______,  _______,  KC_VOLU,  DB_TOGG
+    _______,  KC_SPC,   KC_LPRN,  KC_QUOT,  KC_RCBR,  KC_EQL,     KC_COLN, KC_AMPR,  KC_ASTR,  KC_QUES,  KC_MINS,  _______,
+    KC_TILD,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,    KC_0,    KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  _______,
+              KC_BSLS,  KC_LCBR,  KC_GRV,   KC_RPRN,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
+              KC_VOLD,  _______,  KC_UNDS,  KC_SLSH,  _______,   _______,  KC_ENT,  _______,  _______,  KC_VOLU,  DB_TOGG
   )
 };
 
