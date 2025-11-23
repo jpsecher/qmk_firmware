@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                       ESC_NAV,  OSM_LSFT,    OSL_SYM,  KC_SPC
   ),
   [_NAV_MAC] = LAYOUT_voyager(
-    KC_MPRV,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  _______,
+    KC_MPRV,  _______,  _______,  _______,  _______,  _______,                         _______,  _______,  _______,  _______,  _______,  KC_MNXT,
     _______,  OSL_ALP,  GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN1,                         CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
     _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,                         KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, M_SAVE,   _______,
     _______,  GUIZ,     GUIX,     GUIC,     GUIV,     _______,                         _______,  AGRQUOT,  AGRO,     AGRA,     M_QUIT,   _______,

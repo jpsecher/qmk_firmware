@@ -148,7 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               OSL_ALPM, GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN1,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,
     _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
-              KC_MPRV,  _______,  LCK_ALPM, _______,                       KC_ENT,   _______,  _______,  _______
+              KC_MPRV,  _______,  LCK_ALPM, _______,                       KC_ENT,   _______,  _______,  KC_MNXT
   ),
   [_NUM_MAC] = LAYOUT(
               KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_EQL,    KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,
