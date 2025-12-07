@@ -125,13 +125,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case M_SAVE:
       if (record->event.pressed) {
-        SEND_STRING(SS_TAP(X_ESC) ":w" SS_TAP(X_ENT));
+        SEND_STRING(SS_TAP(X_ESC) ":w");
         return false;
       }
       break;
     case M_QUIT:
       if (record->event.pressed) {
-        SEND_STRING(SS_TAP(X_ESC) ":q" SS_TAP(X_ENT));
+        SEND_STRING(SS_TAP(X_ESC) ":q");
         return false;
       }
       break;
