@@ -27,6 +27,7 @@ enum layer_names {
 #define OSL_ALPM OSL(_ALP_OVL)
 #define LCK_NAVM TO(_NAV_MAC)
 #define TT_NAVM TT(_NAV_MAC)
+#define MO_NAVM MO(_NAV_MAC)
 #define MO_SYM MO(_SYMBOLS)
 #define MO_ALPM MO(_ALP_MAC)
 #define OSM_LSFT OSM(MOD_LSFT)
@@ -90,13 +91,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    B_AGR,    KC_BSPC,
               KC_Z,     KC_X,     KC_C,     V_NUM,                         N_NUM,    KC_M,     KC_COMM,  KC_DOT,
-              KC_MNXT,  KC_ESC,   ESC_NAV,  OSM_LSFT, XXXXXXX,   XXXXXXX,  OSL_SYM,  KC_SPC,   KC_ENT,   KC_MPLY,  DB_TOGG
+              KC_MNXT,  KC_ESC,   MO_NAVM,  OSM_LSFT, XXXXXXX,   XXXXXXX,  OSL_SYM,  KC_SPC,   KC_ENT,   KC_MPLY,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
     _______,  OSL_ALP,  GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN1,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
     _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  M_SAVE,   _______,
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     M_QUIT,
-              KC_MPRV,  _______,  LCK_ALPM, _______,  _______,   _______,  KC_ENT,   _______,  _______,  KC_MNXT,  DB_TOGG
+              KC_MPRV,  _______,  LCK_ALPM, _______,  _______,   _______,  _______,  _______,  _______,  KC_MNXT,  DB_TOGG
   ),
   [_ALP_OVL] = LAYOUT(
     _______,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     _______,
