@@ -142,13 +142,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
     KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_NUM,     H_NUM,    J_CTL,    K_GUI,    L_ALT,    B_AGR,    KC_BSPC,
               KC_Z,     KC_X,     KC_C,     V_NUM,                         N_NUM,    KC_M,     KC_COMM,  KC_DOT,
-              KC_MNXT,  KC_ESC,   MO_NAV,   OSM_LSFT,                      OSL_SYM,  KC_SPC,   KC_ENT,   KC_MPLY
+              KC_MNXT,  KC_ESC,   MO_NAV,   OSM_LSFT,                      OSL_SYM,  KC_SPC,   KC_BSPC,  KC_MPLY
   ),
   [_NAV_MAC] = LAYOUT(
               OSL_ALPM, GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN1,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,
-    _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     _______,
+    _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  SAVE,     KC_ENT,
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     QUIT,
-              KC_MPRV,  _______,  LCK_ALPM, _______,                       _______,  _______,  _______,  KC_MNXT
+              KC_MPRV,  _______,  LCK_ALPM, _______,                       KC_ENT,   _______,  _______,  KC_MNXT
   ),
   [_NUM_MAC] = LAYOUT(
               KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_EQL,    KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,
