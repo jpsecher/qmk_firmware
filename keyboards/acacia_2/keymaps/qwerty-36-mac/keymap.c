@@ -140,7 +140,7 @@ enum {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    G_NUM,     H_NUM,    J_CTL,    K_GUI,    L_ALT,    B_AGR,    XXXXXXX,
+    KC_TAB,   A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    B_AGR,    XXXXXXX,
               KC_Z,     KC_X,     KC_C,     V_NUM,                         N_NUM,    KC_M,     KC_COMM,  KC_DOT,
               KC_MNXT,  KC_ESC,   MO_NAV,   OSM_LSFT,                      KC_BSPC,  KC_SPC,   OSL_SYM,  KC_MPLY
   ),
@@ -157,10 +157,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               QK_BOOT,  KC_UNDS,  LCK_ALPM, KC_SLSH,                       _______,  _______,  KC_COMM,  KC_PWR
   ),
   [_SYMBOLS] = LAYOUT(
-              KC_SPC,   KC_LPRN,  KC_QUOT,  KC_RPRN,  KC_EQL,   KC_COLN,   KC_AMPR,  KC_ASTR,  KC_QUES,  KC_MINS,
-    KC_TILD,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,  KC_0,      KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  _______,
+              KC_SPC,   KC_LPRN,  KC_QUOT,  KC_RPRN,  KC_EQL,    KC_COLN,  KC_AMPR,  KC_ASTR,  KC_QUES,  KC_MINS,
+    KC_TILD,  KC_SCLN,  KC_LBRC,  KC_DQUO,  KC_RBRC,  KC_MINS,   KC_0,     KC_DLR,   KC_PERC,  KC_CIRC,  KC_PLUS,  _______,
               KC_BSLS,  KC_LCBR,  KC_GRV,   KC_RCBR,                       KC_EXLM,  KC_AT,    KC_HASH,  KC_PIPE,
-              KC_VOLD,  KC_UNDS,  KC_UNDS,  KC_SLSH,                       _______,  _______,  KC_COMM,  KC_VOLU
+              KC_VOLD,  KC_UNDS,  LCK_ALPM, KC_SLSH,                       _______,  _______,  KC_COMM,  KC_VOLU
   ),
   [_ALP_OVL] = LAYOUT(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
