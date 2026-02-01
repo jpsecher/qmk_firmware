@@ -79,6 +79,11 @@ enum layer_names {
 #define OSL_ALP OSL(_ALP_OVL)
 #define OSL_SYM OSL(_SYMBOLS)
 
+#define OSM_ALT OSM(MOD_LALT)
+#define OSM_GUI OSM(MOD_LGUI)
+#define OSM_CTL OSM(MOD_LCTL)
+
+
 enum {
   // Save buffer in editor
   M_SAVE = SAFE_RANGE,
@@ -95,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_NAV_MAC] = LAYOUT(
     _______,  OSL_ALP,  GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN2,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
-    _______,  GUIA,     KC_LALT,  KC_LGUI,  KC_LCTL,  KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  M_SAVE,   _______,
+    _______,  GUIA,     OSM_ALT,  OSM_GUI,  OSM_CTL,  KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  M_SAVE,   _______,
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     M_QUIT,
               KC_MPRV,  _______,  LCK_ALPM, _______,  _______,   _______,  _______,  _______,  _______,  KC_MNXT,  DB_TOGG
   ),
