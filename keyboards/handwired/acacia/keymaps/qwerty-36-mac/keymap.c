@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_MNXT,  ESC_FUNM, MO_NAVM,  OSM_LSFT, XXXXXXX,   XXXXXXX,  OSL_SYM,  KC_SPC,   KC_BSPC,  KC_MPLY,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
-    _______,  OSL_ALP,  GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN2,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
-    _______,  GUIA,     OSM_ALT,  OSM_GUI,  OSM_CTL,  KC_BTN1,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  M_SAVE,   _______,
+    _______,  OSL_ALP,  GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN1,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
+    _______,  GUIA,     OSM_ALT,  OSM_GUI,  OSM_CTL,  KC_BTN2,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  M_SAVE,   _______,
               GUIZ,     GUIX,     GUIC,     GUIV,                          AGRQUOT,  AGRO,     AGRA,     M_QUIT,
               KC_MPRV,  _______,  LCK_ALPM, _______,  _______,   _______,  _______,  _______,  _______,  KC_MNXT,  DB_TOGG
   ),
