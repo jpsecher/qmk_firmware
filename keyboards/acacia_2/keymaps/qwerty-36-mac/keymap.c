@@ -58,7 +58,7 @@ enum layer_names {
 
 #define CTLE RCTL(KC_E)
 #define CTLA RCTL(KC_A)
-#define TAB_FUNM LT(_NUM_MAC, KC_TAB)
+#define TAB_SFT LSFT_T(KC_TAB)
 #define B_AGR RALT_T(KC_B)
 #define L_ALT LALT_T(KC_L)
 #define J_CTL RCTL_T(KC_J)
@@ -81,7 +81,7 @@ enum {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-    TAB_FUNM, KC_A,     S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    KC_B,     KC_ENT,
+    TAB_SFT,  KC_A,     S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    KC_B,     KC_ENT,
               KC_Z,     KC_X,     KC_C,     V_NUM,                         N_NUM,    KC_M,     KC_COMM,  KC_DOT,
               KC_MNXT,  ESC_AGR,  MO_NAV,   OSM_LSFT,                      OSL_SYM,  KC_SPC,   KC_BSPC,  KC_MPLY
   ),
