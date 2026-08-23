@@ -19,8 +19,8 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## Acacia-2
 
-    make handwired/acacia_2:qwerty-36-pc
-    make handwired/acacia_2:qwerty-36-pc:flash
+    make acacia_2:qwerty-36-mac
+    make acacia_2:qwerty-36-mac:flash
 
 ## Bootloader
 

@@ -19,7 +19,7 @@
         "nkro": false,
         "caps_word": true,
         "layer_lock": true,
-        "rgblight": true,
+        "rgblight": true
     },
     "matrix_pins": {
         "cols": ["F6", "F4", "F5", "F7", "C7", "D2", "D6", "D7", "D3", "D5"],
