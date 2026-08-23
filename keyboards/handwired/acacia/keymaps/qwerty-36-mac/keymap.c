@@ -79,6 +79,7 @@ enum layer_names {
 #define OSM_MEH OSM(MOD_MEH)
 #define OSL_ALP OSL(_ALP_OVL)
 #define OSL_SYM OSL(_SYMBOLS)
+#define TAB_SFT LSFT_T(KC_TAB)
 
 #define OSM_ALT OSM(MOD_LALT)
 #define OSM_GUI OSM(MOD_LGUI)
@@ -94,10 +95,10 @@ enum {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ALP_MAC] = LAYOUT(
-    KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_ENT,
+    TAB_SFT,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_ENT,
     XXXXXXX,  A_AGR,    S_ALT,    D_GUI,    F_CTL,    KC_G,      KC_H,     J_CTL,    K_GUI,    L_ALT,    B_AGR,    XXXXXXX,
               KC_Z,     KC_X,     KC_C,     V_NUM,                         N_NUM,    KC_M,     KC_COMM,  KC_DOT,
-              KC_MNXT,  ESC_AGR,  MO_NAVM,  OSM_LSFT, XXXXXXX,   XXXXXXX,  OSL_SYM,  KC_SPC,   KC_BSPC,  KC_MPLY,  DB_TOGG
+              KC_MPLY,  ESC_AGR,  MO_NAVM,  OSM_LSFT, XXXXXXX,   XXXXXXX,  OSL_SYM,  KC_SPC,   KC_BSPC,  KC_MNXT,  DB_TOGG
   ),
   [_NAV_MAC] = LAYOUT(
     _______,  OSL_ALP,  GUIY,     KC_WH_D,  KC_WH_U,  KC_BTN1,   CTLA,     KC_PGDN,  KC_PGUP,  CTLE,     QK_LLCK,  _______,
@@ -109,7 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_EQL,    KC_COLN,  KC_7,     KC_8,     KC_9,     QK_LLCK,  _______,
     _______,  F5_AGR,   F6_ALT,   F7_GUI,   F8_CTL,   KC_MINS,   KC_0,     FOUR_CTL, FIVE_GUI, SIX_ALT,  KC_PLUS,  _______,
               KC_F9,    KC_F10,   KC_F11,   KC_F12,                        KC_1,     KC_2,     KC_3,     KC_DOT,
-              QK_BOOT,  KC_UNDS,  LCK_ALPM, KC_SLSH,  _______,   _______,  KC_COMM,  _______,  _______,  KC_PWR,   DB_TOGG
+              KC_EJCT,  KC_UNDS,  LCK_ALPM, KC_SLSH,  _______,   _______,  KC_COMM,  _______,  _______,  KC_PWR,   DB_TOGG
   ),
   [_SYMBOLS] = LAYOUT(
     KC_TILD,  KC_SPC,   KC_LCBR,  KC_QUOT,  KC_RCBR,  KC_EQL,    KC_COLN,  KC_AMPR,  KC_ASTR,  KC_QUES,  QK_LLCK,  _______,
